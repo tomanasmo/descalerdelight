@@ -14,6 +14,7 @@ import { M7OneImageWithDescRightAndTopModule } from './m7-one-image-with-desc-ri
 import { M8TrippleImagesAlternatingModule } from './m8-tripple-images-alternating/m8-tripple-images-alternating.module';
 import { M9DraftModule } from './m9-draft/m9-draft.module';
 import { M10DraftModule } from './m10-draft/m10-draft.module';
+import { M11FaqModule } from './m11-faq/m11-faq.module';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { M10DraftModule } from './m10-draft/m10-draft.module';
     M7OneImageWithDescRightAndTopModule,
     M8TrippleImagesAlternatingModule,
     M9DraftModule,
-    M10DraftModule
+    M10DraftModule,
+    M11FaqModule
   ],
   providers: [],
   bootstrap: [AppComponent]

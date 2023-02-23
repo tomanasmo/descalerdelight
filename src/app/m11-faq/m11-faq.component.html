@@ -1,0 +1,83 @@
+<div class="wrapper"> 
+
+  <ng-container *ngTemplateOutlet="headline"></ng-container>
+
+
+  <div style="display: grid; grid-template-columns: 5% 95%; gap: 20px;">
+
+    <div>
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>    
+    <div>      
+      <strong>Spørsmål: Vil dette hjelpe meg med å lade enklere?</strong>
+      <p>
+        <strong>Svar:</strong> Ja, for få ladere eller for lite antall stikkontakter er ofte grunnen til at du ikke finner lading når du trenger det. Med sine 4 porter og kun behov for en stikkontakt hjelper Ladalt med å alltid sørge for at du har ledig lading.
+      </p>
+    </div>
+
+    <div>
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>    
+    <div>      
+      <strong>Spørsmål: Jeg har en travel hverdag. Vil dette hjelpe meg med å lade raskere?</strong>
+      <p>
+        <strong>Svar:</strong> Ja, for få ladere eller for lite antall stikkontakter er ofte grunnen til at du ikke finner lading når du trenger det. Med sine 4 porter og kun behov for en stikkontakt hjelper Ladalt med å alltid sørge for at du har ledig lading.
+      </p>
+    </div>
+
+    <div>
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>    
+    <div>      
+      <strong>Spørsmål: Er den trygg å bruke?</strong>
+      <p>
+        <strong>Svar:</strong> Ja, Ladalt har avansert smartchip-teknologi innebygd som sørger for at nok strøm passerer gjennom uten å skade hverken laderen eller enhetene dine for å sikre rask og stabil lading.
+      </p>
+    </div>
+
+    <div>
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>    
+    <div>      
+      <strong>Spørsmål: Er den lagd av god kvalitet?</strong>
+      <p>
+        <strong>Svar:</strong> Ja, Ladalt er lagd av svært holdbare og brannsikre materialer (PC og ABS). Den er i tillegg designet miljøvennlig for å veie så lite som mulig uten bruk av unødvendige materialer.
+      </p>
+    </div>
+
+  </div>
+
+      <!--<div class="item2">
+
+        
+
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+
+        <h3>Standard ladere</h3>
+        <p>En typisk vanlig lader er ikke lagd for å lade mer enn en ting om gangen, slik at du ofte mangler lading når du trenger det som resulterer i at du må lete etter ledig lading.</p>
+      
+      </div>      
+
+      <div class="item1">
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+
+        <h3>Ladalt Smartchip</h3>
+        <p>Ladalt bruker avansert smartchip-teknologi for å tilby fire ganger mer lading, slik at du alltid har lading tilgjengelig og slipper å vente eller gå på leting.</p>
+
+      </div>
+    
+    </div>-->
+
+
+
+
+
+<!-- Image. -->
+<ng-template #image>
+  <!--<img src="./assets/img/p3-1-logo.png" />-->
+  <img src="./assets/img/icon-black.svg" />
+</ng-template>
+
+<ng-template #headline>
+  <h1>Ofte stilte <strong>spørsmål</strong></h1>
+</ng-template>
