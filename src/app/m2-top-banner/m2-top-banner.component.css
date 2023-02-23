@@ -32,7 +32,8 @@
 }
 
 .wrapper.is-medium img, .wrapper.is-small img {
-  width: 80%; 
+  width: 80%;
+  padding-top: 0.5em; /* Add some air to top menu. */
 }
 
 /* Item1. */

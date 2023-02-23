@@ -1,3 +1,5 @@
+<div class="wrapper">
+
 <div class="outer-grid">
 
 <!-- Content. -->
@@ -20,6 +22,8 @@
 
 </div>
 
+</div>
+
 <!-- Templates. -->
 
 <!-- Menu icons. -->
@@ -36,7 +40,7 @@
 <!-- Logo. -->
 <ng-template #logo>
   <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
-    <img src="./assets/img/logo-white.svg" />
+    <img [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" src="./assets/img/logo-white.svg" />
   </a>
 </ng-template>
 

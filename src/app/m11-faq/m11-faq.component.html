@@ -4,7 +4,7 @@
 
   <ng-container *ngTemplateOutlet="headline"></ng-container>
 
-  <div style="display: grid; grid-template-columns: 5% 95%; gap: 20px;">
+  <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
 
     <div>
       <ng-container *ngTemplateOutlet="image"></ng-container>

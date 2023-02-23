@@ -1,6 +1,7 @@
-* {
+.wrapper {
   background-color: black;
   color: white;
+  padding: 1em 2em;
 }
 
 a:hover, mat-icon {
@@ -28,17 +29,17 @@ a:hover, mat-icon {
 /* Grid. */
 
 .grid {
-  height: 60px;
+  /*height: 60px;*/
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
+  grid-template-columns: 20% 80%;/*0.2fr 0.8fr;*/
   align-items: center;
-  padding: 0 2em;
+  /*padding: 0 2em;*/
 }
 
 .grid.is-medium, .grid.is-small {
-  height: 60px;
+  /*height: 60px;*/
   display: grid;
-  grid-template-columns: 0.35fr 0.3fr 0.35fr;
+  grid-template-columns: 0.3fr 0.4fr 0.3fr;
   /*padding: 0 2em;*/
 }
 
@@ -49,7 +50,7 @@ a:hover, mat-icon {
 }
 
 .item2.is-medium, .item2.is-small {
-  justify-self: center;
+  justify-self: center;  
 }
 
 /* Item3. */
@@ -60,5 +61,10 @@ a:hover, mat-icon {
 
 img {
   display: block;
-  width: 70%;
+  width: 100%;  
+}
+
+img.is-medium, img.is-small {
+  margin: 0 auto; /* Center logo. */
+  width: 100%;
 }
