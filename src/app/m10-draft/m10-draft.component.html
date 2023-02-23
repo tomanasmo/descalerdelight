@@ -1,0 +1,54 @@
+<div class="wrapper"> 
+
+  <ng-container *ngTemplateOutlet="headline"></ng-container>
+
+  <div class="outer-grid">
+
+    <!--<div *ngIf="isMedium || isSmall" class="test">
+      <ng-container *ngTemplateOutlet="headline"></ng-container>
+      <ng-container *ngTemplateOutlet="image2"></ng-container>
+    </div>-->
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <!--<div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>-->
+
+      <div class="item2">
+
+        
+
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+
+        <h3>Standard ladere</h3>
+        <p>En typisk vanlig lader er ikke lagd for å lade mer enn en ting om gangen, slik at du ofte mangler lading når du trenger det som resulterer i at du må lete etter ledig lading.</p>
+      
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <!--<div *ngIf="isMedium || isSmall" class="item1">-->
+      <div class="item1">
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+
+        <h3>Ladalt Smartchip</h3>
+        <p>Ladalt bruker avansert smartchip-teknologi for å tilby fire ganger mer lading, slik at du alltid har lading tilgjengelig og slipper å vente eller gå på leting.</p>
+
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image1>
+  <!--<img src="./assets/img/p3-1-logo.png" />-->
+  <img src="./assets/img/mockup/i11.png" />
+</ng-template>
+
+<ng-template #headline>
+  <h1><strong>Nok lading</strong> forenkler hverdagen din og sparer deg tid</h1>
+</ng-template>

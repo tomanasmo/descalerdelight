@@ -13,6 +13,7 @@ import { M0CoreModule } from './m0-core/m0-core.module';
 import { M7OneImageWithDescRightAndTopModule } from './m7-one-image-with-desc-right-and-top/m7-one-image-with-desc-right-and-top.module';
 import { M8TrippleImagesAlternatingModule } from './m8-tripple-images-alternating/m8-tripple-images-alternating.module';
 import { M9DraftModule } from './m9-draft/m9-draft.module';
+import { M10DraftModule } from './m10-draft/m10-draft.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { M9DraftModule } from './m9-draft/m9-draft.module';
     M6StickyBarModule,
     M7OneImageWithDescRightAndTopModule,
     M8TrippleImagesAlternatingModule,
-    M9DraftModule
+    M9DraftModule,
+    M10DraftModule
   ],
   providers: [],
   bootstrap: [AppComponent]

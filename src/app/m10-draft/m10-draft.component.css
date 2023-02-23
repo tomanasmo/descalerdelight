@@ -1,0 +1,75 @@
+/* Outer grid */
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;
+  /*background-color: rgb(195, 195, 195);
+  background-color: black;
+  color: white;*/
+}
+
+/* Grid. */
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;/*0.3fr 0.7fr;*/
+  justify-items: center;
+  align-items: center;
+  /*padding: 1em 0;*/
+  gap: 40px;
+  padding: 1em 2em;
+}
+
+.grid.is-medium, .grid.is-small {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  /*padding: 0 15%;*/
+  gap: 0;
+}
+
+/* General. */
+
+.item1, .item2 {
+  display: grid;
+  grid-template-rows: auto;
+  /*gap: 5px;
+  font-size: 1.2em;*/  
+}
+
+img {
+  /*display: block;*/
+  width: 100%;
+  /*background: url(src/assets/img/i1.bmp) no-repeat center center;
+  background-size: contain;*/
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.wrapper {
+  padding: 1em 2em;
+  background-color: white;
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;  
+}
+
+h3 {
+  margin: 0;
+}
+
+.order-now2 {
+  background-color: rgb(14, 209, 61);
+  padding: 10px 25px;
+  color: white;
+  font-weight: bolder;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 5px;
+}
