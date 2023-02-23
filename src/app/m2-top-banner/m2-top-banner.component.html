@@ -1,0 +1,34 @@
+<div class="outer-grid">
+
+<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <!-- Show this only if not big screen. -->
+  <div *ngIf="isMedium || isSmall" class="item1">
+    <ng-container *ngTemplateOutlet="image"></ng-container>
+  </div>
+
+  <div class="item2">
+    <div class="rabatt">{{ text[0] }}</div>
+    <span class="prosent">-{{ discountPercent }}%</span>
+    <p class="siste-sjanse">{{ text[1] }}</p>
+    <p class="siste-sjanse2">{{ text[2] }}</p>
+    <a class="order-now2" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[3] }} -{{ discountPercent}}% {{ text[4] }}</a>
+    <p class="kun">{{ text[5] }} {{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[6] }} {{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[7] }}</p>
+    <p class="kun">{{ text[8] }}</p>
+    <p class="kun">{{ text[9] }}</p>
+  </div>
+
+  <!-- Show this only if big screen. -->
+  <div *ngIf="!isMedium && !isSmall">
+    <ng-container *ngTemplateOutlet="image"></ng-container>
+  </div>
+
+</div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image>
+  <!--<img src="./assets/img/p1.png" />-->
+  <img src="./assets/img/mockup/i2.png" />
+</ng-template>

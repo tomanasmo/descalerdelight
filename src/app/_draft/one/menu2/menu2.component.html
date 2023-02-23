@@ -1,0 +1,27 @@
+<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    
+    <div class="item11" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}"></div>
+    
+    <div class="item12">
+      <a class="logo" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+        LOGO
+      </a>
+    </div>
+    
+    <div class="item13" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" *ngIf="toggleMenu; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock><mat-icon class="test" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" aria-label="Menu" (click)="toggleMenu = !toggleMenu">menu</mat-icon></ng-template>
+    <ng-template #elseBlock><mat-icon class="test" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" aria-label="Close" (click)="toggleMenu = !toggleMenu">close</mat-icon></ng-template>
+  
+  </div>
+
+  <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <div class="menu3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" *ngIf="!toggleMenu || isBig">
+      <a class="track" routerLink="/tracking" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[0] }}</a>
+      <a class="contact" routerLink="/support" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[1] }}</a>
+      <a class="order-now" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[2] }}</a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <div>LOGO</div>
+      </div>
+
+      <div class="item2" *ngIf="isBig">
+        <mat-icon>star star star star star_half</mat-icon>
+      </div>
+
+      <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <a class="order-now2" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ -{{ discountPercent}}% I RABATT</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

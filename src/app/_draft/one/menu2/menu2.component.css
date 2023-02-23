@@ -1,0 +1,157 @@
+* {
+  background-color: plum;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 25px;
+}
+
+/*.item1 {
+  background-color: yellow;
+}
+
+.item2 {
+  background-color: blue;
+}*/
+
+.item11, .item3, .test {
+  display: none;
+}
+
+.test:hover {
+  cursor: pointer;
+}
+
+.wrapper a
+{
+  color: black;
+  text-decoration: none;
+}
+
+.item2 {
+  justify-self: right;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.item2 a:visited
+{
+  text-decoration: none;
+}
+
+.item2 a:hover
+{
+  text-decoration: underline;
+}
+
+.order-now {
+  background-color: rgb(14, 209, 61);
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.logo
+{  
+  font-weight: bolder;
+  border: solid 5px;
+  padding: 10px;
+}
+
+.track, .contact {
+  margin-right: 30px;
+}
+
+/* Medium screen size. */
+
+.wrapper.is-medium {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px 25px 25px;
+}
+
+.item1.is-medium {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.item11.is-medium, .item13.is-medium {
+  display: block;
+  align-self: center;
+  text-align: right;
+}
+
+.test {
+  align-self: center;
+  justify-self: right;
+}
+
+.test.is-medium {
+  display: block;
+}
+
+.logo.is-medium {  
+  font-weight: bolder;
+  border: solid 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.item2.is-medium {
+  padding-top: 20px;
+  justify-self: center;
+}
+
+/* Small screen size. */
+
+.wrapper.is-small {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 10px 25px;
+}
+
+.item1.is-small {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.item11.is-small, .item13.is-small {
+  display: block;
+  align-self: center;
+  text-align: right;
+}
+
+.test.is-small {
+  display: block;
+}
+
+.menu3.is-small {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.logo.is-small {  
+  font-weight: bolder;
+  border: solid 5px;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.menu3.is-small a {
+  margin: 0;
+}
+
+.item2.is-small {
+  padding-top: 20px;
+  justify-self: center;
+}

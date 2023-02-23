@@ -1,0 +1,75 @@
+/* Outer grid */
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;  
+  /*padding: 1em 2em;*/
+}
+
+/* Grid. */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;  
+}
+
+.grid.is-medium, .grid.is-small {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+/* General. */
+
+/*.item1, .item2, .item3 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.2em;
+}*/
+
+.item1 {
+  justify-self: left;
+}
+
+.item2 {
+  color: orange;
+}
+
+.item3 {
+  justify-self: right;
+}
+
+.item1.is-medium, .item3.is-medium, .item1.is-small, .item3.is-small {
+  justify-self: center;
+}
+
+mat-icon {
+  font-size: 2em;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.order-now2 {
+  background-color: rgb(14, 209, 61);
+  padding: 10px 25px;
+  color: white;
+  font-weight: bolder;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.wrapper {
+  padding: 1em 2em;
+  /*background-color: black;*/
+  background-color: black;
+  color: white;
+}

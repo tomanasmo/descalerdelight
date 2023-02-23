@@ -1,0 +1,38 @@
+<!-- Content. -->
+
+<div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <div class="item1" *ngIf="!isBig"></div>
+
+  <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <ng-container *ngTemplateOutlet="logo"></ng-container>
+  </div>
+    
+  <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <ng-container *ngIf="isBig; else menuIcons">
+      <ng-container *ngTemplateOutlet="menuLinks"></ng-container>
+    </ng-container>
+  </div>
+  
+</div>
+
+<!-- Templates. -->
+
+<!-- Menu icons. -->
+<ng-template #menuIcons>
+  <mat-icon *ngIf="getToggle()" aria-label="Menu" (click)="onClick()">menu</mat-icon>
+  <mat-icon *ngIf="!getToggle()" aria-label="Close" (click)="onClick()">close</mat-icon>
+</ng-template>
+
+<!-- Menu links.  -->
+<ng-template #menuLinks>
+  <app-grid-lower></app-grid-lower>
+</ng-template>
+
+<!-- Logo. -->
+<ng-template #logo>
+  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+    LOGO
+  </a>
+</ng-template>
+

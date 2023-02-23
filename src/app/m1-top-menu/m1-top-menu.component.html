@@ -1,0 +1,5 @@
+<app-grid-upper></app-grid-upper>
+
+<ng-container *ngIf="!getToggle()">
+  <app-grid-lower *ngIf="!isBig"></app-grid-lower>
+</ng-container>

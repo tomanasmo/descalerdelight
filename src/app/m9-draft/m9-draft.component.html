@@ -1,0 +1,43 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <!--<div *ngIf="isMedium || isSmall" class="test">
+      <ng-container *ngTemplateOutlet="headline"></ng-container>
+      <ng-container *ngTemplateOutlet="image2"></ng-container>
+    </div>-->
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <!--<div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>-->
+
+      <div class="item2">
+
+        <h1>Suveren ladekapasitet med <strong>4 ganger mer porter</strong> enn normalt</h1>
+
+        <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+          <a class="order-now2" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ -{{ discountPercent}}% I RABATT</a>
+        </div>
+      
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <!--<div *ngIf="isMedium || isSmall" class="item1">-->
+      <div class="item1">
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image1>
+  <!--<img src="./assets/img/p3-1-logo.png" />-->
+  <img src="./assets/img/mockup/i11.png" />
+</ng-template>

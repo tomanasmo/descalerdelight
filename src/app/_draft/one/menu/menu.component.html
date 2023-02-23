@@ -1,0 +1,26 @@
+<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <div class="item1" [ngClass]="{'is-medium': isMedium}">
+    <div class="item11" [ngClass]="{'is-medium': isMedium}"></div>
+    <div class="item12">
+      <a class="logo" [ngClass]="{'is-medium': isMedium}" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+        LOGO
+      </a>
+    </div>
+    <div class="item13" [ngClass]="{'is-medium': isMedium}">
+      <mat-icon aria-label="Menu">menu</mat-icon>
+    </div>
+  </div>
+
+  <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <div class="menu3" [ngClass]="{'is-small': isSmall}">
+      <a class="track" routerLink="/tracking" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[0] }}</a>
+      <a class="contact" routerLink="/support" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[1] }}</a>
+      <a class="order-now" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[2] }}</a>
+    </div>
+  </div>
+
+</div>
+
+
+<mat-icon aria-label="Close">close</mat-icon>

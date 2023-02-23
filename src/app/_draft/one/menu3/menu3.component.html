@@ -1,0 +1,49 @@
+<!-- Content. -->
+
+<div class="upperGrid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <div class="item1" *ngIf="!isBig"></div>
+
+  <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <ng-container *ngTemplateOutlet="logo"></ng-container>
+  </div>
+    
+  <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <ng-container *ngIf="isBig; else menuIcon">
+      <ng-container *ngTemplateOutlet="menu"></ng-container>
+    </ng-container>
+
+  </div>
+  
+</div>
+
+
+
+
+  <!--<div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">    
+    <app-main-menu *ngIf="!toggleMenu || isBig"></app-main-menu>
+  </div>-->
+
+
+
+<!-- Templates. -->
+
+<!-- Menu icons. -->
+<ng-template #menuIcon>
+  <mat-icon *ngIf="toggleMenu" aria-label="Menu" (click)="toggleMenu = !toggleMenu">menu</mat-icon>
+  <mat-icon *ngIf="!toggleMenu" aria-label="Close" (click)="toggleMenu = !toggleMenu">close</mat-icon>
+</ng-template>
+
+<!-- Menu links.  -->
+<ng-template #menu>
+  <a class="track" routerLink="/tracking" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[0] }}</a>
+  <a class="contact" routerLink="/support" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[1] }}</a>
+  <a class="order-now" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[2] }}</a>
+</ng-template>
+
+<ng-template #logo>
+  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+    LOGO
+  </a>
+</ng-template>
+

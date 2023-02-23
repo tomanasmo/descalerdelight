@@ -1,0 +1,36 @@
+* {
+  background-color: black;
+  color: white;
+}
+
+a:hover, mat-icon {
+  cursor: pointer;
+}
+
+/* UpperGrid. */
+
+.upperGrid {
+  height: 60px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.upperGrid.is-medium, .upperGrid.is-small {
+  height: 60px;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+/* Item2. */
+
+.item2.is-medium, .item2.is-small {
+  justify-self: center;
+}
+
+/* Item3. */
+
+.item3 {
+  justify-self: right;
+}

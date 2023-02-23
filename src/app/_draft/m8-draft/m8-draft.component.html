@@ -1,0 +1,66 @@
+<div class="wrapper">
+
+  <ng-container *ngTemplateOutlet="headline"></ng-container>
+
+  <div class="outer-grid">
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <div *ngIf="isMedium || isSmall">
+          <ng-container *ngTemplateOutlet="image1"></ng-container>
+        </div>
+        <div>
+          <h3>400% økt effektivitet</h3>
+          <p>Lad 4 ganger så mange enheter samtidig uten behov for ekstra grenuttak. Ikke bruk tid på å lete etter lading.</p>
+        </div>
+        <div *ngIf="isBig">
+          <ng-container *ngTemplateOutlet="image1"></ng-container>
+        </div>
+      </div>
+
+      <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <div>
+          <ng-container *ngTemplateOutlet="image2"></ng-container>
+        </div>
+        <div>
+          <h3>Plassbesparende</h3>
+          <p>Med sine 4 porter og behov for kun en stikkontakt er dette med stor sannsynlighet den mest plassbesparende og effektive laderen som noengang er laget.</p>
+        </div>
+      </div>
+
+      <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <div *ngIf="isMedium || isSmall">
+          <ng-container *ngTemplateOutlet="image3"></ng-container>
+        </div>
+        <div>
+          <h3>Spar penger</h3>
+          <p>Unngå å kjøpe ekstra ladere – med 4 porter sparer du penger på å slippe å kjøpe ekstra ladere.</p>
+        </div>
+        <div *ngIf="isBig">
+          <ng-container *ngTemplateOutlet="image3"></ng-container>
+        </div>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image1>
+  <img src="./assets/img/mockup/i8.png" />
+</ng-template>
+
+<ng-template #image2>
+  <img src="./assets/img/mockup/i9.png" />
+</ng-template>
+
+<ng-template #image3>
+  <img src="./assets/img/mockup/i10.png" />
+</ng-template>
+
+<ng-template #headline>
+  <h1><strong>Unngå å mangle lading</strong> på grunn av lader med for liten kapasitet</h1>
+</ng-template>

@@ -1,0 +1,39 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>
+
+      <div class="item2">
+
+        <h1>Hvordan <strong>Ladalt</strong> hjelper deg å <strong>lade med en gang</strong></h1>
+        
+        <p>Med sine kvadruple porter får du muligheten til å lade 4x så mange enheter samtidig som en standard lader med kun 1 port.</p>
+
+        <p>Så mange porter gjør at du reduserer behovet for stikkontakter med 75% - der du tidligere ville trengt fire ladere trenger du nå bare en.</p>
+
+        <p>Mange boliger og spesielt eldre hus er ikke lagd med nok stikkontakter for vår moderne digitale verden - Ladalt hjelper deg med å å spare penger på kostbare elektrikere.</p>
+      
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <div *ngIf="isMedium || isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image>
+  <!--<img src="./assets/img/p2.png" />-->
+  <img src="./assets/img/mockup/i6.png" />
+</ng-template>

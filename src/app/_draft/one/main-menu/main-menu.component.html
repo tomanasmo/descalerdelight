@@ -1,0 +1,15 @@
+<div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+  
+  <a class="track" routerLink="/tracking" routerLinkActive="active" ariaCurrentWhenActive="page">
+    {{ text[0] }}
+  </a>
+
+  <a class="contact" routerLink="/support" routerLinkActive="active" ariaCurrentWhenActive="page">
+    {{ text[1] }}
+  </a>
+  
+  <a class="order-now" routerLink="/order" routerLinkActive="active" ariaCurrentWhenActive="page">
+    {{ text[2] }}
+  </a>
+
+</div>
