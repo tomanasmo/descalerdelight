@@ -15,6 +15,7 @@ import { M8TrippleImagesAlternatingModule } from './m8-tripple-images-alternatin
 import { M9DraftModule } from './m9-draft/m9-draft.module';
 import { M10DraftModule } from './m10-draft/m10-draft.module';
 import { M11FaqModule } from './m11-faq/m11-faq.module';
+import { M12WhyChooseModule } from './m12-why-choose/m12-why-choose.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { M11FaqModule } from './m11-faq/m11-faq.module';
     M8TrippleImagesAlternatingModule,
     M9DraftModule,
     M10DraftModule,
-    M11FaqModule
+    M11FaqModule,
+    M12WhyChooseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
