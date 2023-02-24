@@ -15,36 +15,32 @@
     <!-- Header row. -->
     <div></div>
     <div class="header">
-      <ng-container *ngTemplateOutlet="image"></ng-container>
+      <p><ng-container *ngTemplateOutlet="image"></ng-container></p>
     </div>
     <div class="header2">
-      <ng-container *ngTemplateOutlet="image2"></ng-container>
+      <p><ng-container *ngTemplateOutlet="image2"></ng-container></p>
     </div>
 
     <!-- Row 1. -->
-    <div class="item1 diffColor">      
-      <div class="text">
-        <div>
-          <strong>Suveren ladekapasitet</strong>
-          <br/>Kvadrupple porter
-        </div>
-      </div>      
+    <div class="item1 diffColor">
+      <p>
+        <strong>Suveren ladekapasitet</strong>
+        <br/>Kvadrupple porter
+      </p>      
     </div>
     <div class="item2 diffColor">
-      <ng-container *ngTemplateOutlet="green"></ng-container>
+      <ng-container *ngTemplateOutlet="green"></ng-container>      
     </div>
     <div class="item3 diffColor">
       <ng-container *ngTemplateOutlet="red"></ng-container>
     </div>
 
     <!-- Row 2. -->
-    <div class="item1">      
-      <div class="text">
-        <div>
-          <strong>Fornøydhetsgaranti</strong><br/>
-          14 dagers angrefrist
-        </div>
-      </div>      
+    <div class="item1"> 
+      <p>
+        <strong>Fornøydhetsgaranti</strong><br/>
+        14 dagers angrefrist
+      </p>
     </div>
     <div class="item2">
       <ng-container *ngTemplateOutlet="green"></ng-container>
@@ -54,13 +50,11 @@
     </div>
 
     <!-- Row 3. -->
-    <div class="item1 diffColor">      
-      <div class="text">
-        <div>
-          <strong>Spar plass</strong><br/>
-          Trenger 75% færre stikkontakter
-        </div>
-      </div>      
+    <div class="item1 diffColor">
+      <p>
+        <strong>Spar plass</strong><br/>
+        Trenger 75% færre stikkontakter
+      </p>
     </div>
     <div class="item2 diffColor">
       <ng-container *ngTemplateOutlet="green"></ng-container>
@@ -70,13 +64,11 @@
     </div>
 
     <!-- Row 4. -->
-    <div class="item1">      
-      <div class="text">
-        <div>
-          <strong>Alltid ledig lading</strong><br/>
-          4x mer porter
-        </div>
-      </div>      
+    <div class="item1"> 
+      <p>
+        <strong>Vent aldri på lading</strong><br/>
+        Fire ladeuttak
+      </p>
     </div>
     <div class="item2">
       <ng-container *ngTemplateOutlet="green"></ng-container>
@@ -86,13 +78,11 @@
     </div>
 
     <!-- Row 5. -->
-    <div class="item1 diffColor">      
-      <div class="text">
-        <div>
-          <strong>Rimelig</strong><br/>
-          Pris
-        </div>
-      </div>      
+    <div class="item1 diffColor">
+      <p>
+        <strong>Rimelig</strong><br/>
+        Pris
+      </p>
     </div>
     <div class="item2 diffColor">
       <ng-container *ngTemplateOutlet="green"></ng-container>
@@ -103,7 +93,7 @@
 
     <!-- Footer row. -->
     <div></div>
-    <div class="footer"></div>
+    <div class="footer"><p></p></div>
     <div></div>
 
   </div>
@@ -112,12 +102,12 @@
 
 
 <!-- Templates. -->
-<ng-template #green>  
-  <mat-icon class="green">check</mat-icon>
+<ng-template #green>
+  <mat-icon class="icon-align green">check</mat-icon>
 </ng-template>
 
-<ng-template #red>  
-  <mat-icon class="red">close</mat-icon>
+<ng-template #red>
+  <mat-icon class="icon-align red">close</mat-icon>
 </ng-template>
 
 <ng-template #headline>

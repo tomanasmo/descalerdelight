@@ -1,8 +1,8 @@
 .wrapper {
-  padding: 1em 2em 3em;
+  padding: 1em 1em 3em;
   /*background-color: white;*/
   background-color: rgb(195, 195, 195);
-  color: black;  
+  color: black;
 }
 
 /* Outer grid */
@@ -21,44 +21,30 @@
 .grid {
   display: grid;
   grid-template-columns: 60% 20% 20%;
-  align-items: center;
-  /*gap: 20px;*/
+  /*height: 400px;*/
 }
 
-.grid.is-small {
+.grid.is-small, .grid.is-medium {
   display: grid;
-  grid-template-columns: 55% 22.5% 22.5%; /*auto auto auto;*/
-  align-items: center;
-  /*gap: 20px;*/
+  grid-template-columns: auto 20% 20%; /*auto auto auto;*/
+  /*height: 450px;*/
 }
 
 .item1 {
   height: 100%;
-  padding-left: 1em;
+  /*padding-right: 1em;*/
 }
-
-.text {
-  display: grid;
-  grid-template-rows: auto;
-  align-items: center;
-  height: 100%;
-}
-
-/*.item3 {
-  height: 100%;
-}*/
 
 .item2, .item3 {
-  display: grid;
-  grid-template-columns: auto;
-  /*align-items: center;*/
-  padding: 1em;
-  /*gap: 20px;*/
-  /*padding: 1em;*/
+  height: 100%;
+}
+
+.item1 p {
+  padding: 0 1em;
 }
 
 .header {
-  height: 20px;
+  height: 100%;
   border-left:black solid 3px;
   border-right:black solid 3px;
   border-top:black solid 3px;
@@ -68,12 +54,12 @@
 }
 
 .header2 {
-  height: 20px;
+  height: 100%;
   position: relative; /* To be able to bottom position header image. */
 }
 
 .footer {
-  height: 20px;
+  height: 100%;
   border-left:black solid 3px;
   border-right:black solid 3px;
   border-bottom:black solid 3px;
@@ -88,49 +74,29 @@
   width: 100%;
 }
 
-/*.item11, .item21, .item31, .item41, .item51 {
-  justify-self: left;
-  padding: 1em;
-}*/
-
-.item2 { /*12, .item22, .item32, .item42, .item52 {*/
-  /*border-left:rgb(84, 176, 0) solid 3px;
-  border-right:rgb(84, 176, 0) solid 3px;*/
+.item2 {
   border-left:black solid 3px;
   border-right:black solid 3px;
-  /*
-  width: 100%;*/
+}
+
+.icon-align {
+  font-weight: 900;
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+  width: 100%;
+  height: 100%;  
+  font-size: 2em;
+  text-align: center;
 }
 
 .green {
-  text-align: center;
   color: rgb(84, 176, 0);
-  font-size: 2em;
-  font-weight: 900;
-  width: 100%;
-  height: 100%;
 }
 
 .red {
-  text-align: center;
-  color: rgb(219, 26, 0);
-  font-size: 2em;
-  font-weight: 900;
-  width: 100%;
-  height: 100%;
+  color: rgb(219, 26, 0);  
 }
-
-/*.item1.is-medium {
-  display: grid;
-  grid-template-columns: 8% 92%;
-  gap: 20px;
-}
-
-.item1.is-small {
-  display: grid;
-  grid-template-columns: 12% 88%;
-  gap: 20px;
-}*/
 
 /* General. */
 
@@ -138,22 +104,7 @@
   background-color: white;
 }
 
-/*.item1, .item2 {
-  display: grid;
-  grid-template-rows: auto;*/
-  /*gap: 5px;
-  font-size: 1.2em;*/  
-/*}*/
-
 h1 {
   text-align: center;
   font-weight: normal;
-}
-
-h3 {
-  margin: 0;
-}
-
-ul {
-  list-style-image: url(src/assets/img/icon-black.svg);
 }

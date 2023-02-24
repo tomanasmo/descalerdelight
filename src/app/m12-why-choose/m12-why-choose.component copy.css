@@ -1,3 +1,10 @@
+.wrapper {
+  padding: 1em 2em;
+  /*background-color: white;*/
+  background-color: rgb(195, 195, 195);
+  color: black;    
+}
+
 /* Outer grid */
 
 .outer-grid {
@@ -14,28 +21,13 @@
 .grid {
   display: grid;
   grid-template-rows: auto;
-  /*gap: 20px;*/
 }
 
-.item1, .item2, .item3, .item4, .item5 {
+.item1, .item2, .item3 {
   display: grid;
   grid-template-columns: 60% 20% 20%;
   justify-items: center;
   align-items: center;
-  /*gap: 20px;*/
-  /*padding: 1em;*/
-}
-
-.item11, .item21, .item31, .item41, .item51 {
-  justify-self: left;
-  padding: 1em;
-}
-
-.item12, .item22, .item32, .item42, .item52 {
-  border-left:rgb(84, 176, 0) solid 3px;
-  border-right:rgb(84, 176, 0) solid 3px;
-  text-align: center;
-  width: 100%;
 }
 
 .green {
@@ -53,18 +45,6 @@
   width: 100%;
   height: 100%;
 }
-
-/*.item1.is-medium {
-  display: grid;
-  grid-template-columns: 8% 92%;
-  gap: 20px;
-}
-
-.item1.is-small {
-  display: grid;
-  grid-template-columns: 12% 88%;
-  gap: 20px;
-}*/
 
 /* General. */
 
@@ -91,17 +71,7 @@ h1 {
   font-weight: normal;
 }
 
-.wrapper {
-  padding: 1em 2em;
-  /*background-color: white;*/
-  background-color: rgb(195, 195, 195);
-  color: black;  
-}
 
 h3 {
   margin: 0;
-}
-
-ul {
-  list-style-image: url(src/assets/img/icon-black.svg);
 }
