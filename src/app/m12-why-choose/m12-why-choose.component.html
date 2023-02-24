@@ -1,1 +1,134 @@
-<p>m12-why-choose works!</p>
+<div class="wrapper"> 
+
+  <div class="outer-grid">
+
+  <ng-container *ngTemplateOutlet="headline"></ng-container>
+
+  <br *ngIf="isBig"/>
+  <br *ngIf="isBig"/>
+  <br/>
+  <br/>
+  <br *ngIf="!isSmall"/>
+
+  <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">    
+    
+    <!-- Header row. -->
+    <div></div>
+    <div class="header">
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>
+    <div class="header2">
+      <ng-container *ngTemplateOutlet="image2"></ng-container>
+    </div>
+
+    <!-- Row 1. -->
+    <div class="item1 diffColor">      
+      <div class="text">
+        <div>
+          <strong>Suveren ladekapasitet</strong>
+          <br/>Kvadrupple porter
+        </div>
+      </div>      
+    </div>
+    <div class="item2 diffColor">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+    <div class="item3 diffColor">
+      <ng-container *ngTemplateOutlet="red"></ng-container>
+    </div>
+
+    <!-- Row 2. -->
+    <div class="item1">      
+      <div class="text">
+        <div>
+          <strong>Fornøydhetsgaranti</strong><br/>
+          14 dagers angrefrist
+        </div>
+      </div>      
+    </div>
+    <div class="item2">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+    <div class="item3">
+      <ng-container *ngTemplateOutlet="red"></ng-container>
+    </div>
+
+    <!-- Row 3. -->
+    <div class="item1 diffColor">      
+      <div class="text">
+        <div>
+          <strong>Spar plass</strong><br/>
+          Trenger 75% færre stikkontakter
+        </div>
+      </div>      
+    </div>
+    <div class="item2 diffColor">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+    <div class="item3 diffColor">
+      <ng-container *ngTemplateOutlet="red"></ng-container>
+    </div>
+
+    <!-- Row 4. -->
+    <div class="item1">      
+      <div class="text">
+        <div>
+          <strong>Alltid ledig lading</strong><br/>
+          4x mer porter
+        </div>
+      </div>      
+    </div>
+    <div class="item2">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+    <div class="item3">
+      <ng-container *ngTemplateOutlet="red"></ng-container>
+    </div>
+
+    <!-- Row 5. -->
+    <div class="item1 diffColor">      
+      <div class="text">
+        <div>
+          <strong>Rimelig</strong><br/>
+          Pris
+        </div>
+      </div>      
+    </div>
+    <div class="item2 diffColor">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+    <div class="item3 diffColor">
+      <ng-container *ngTemplateOutlet="green"></ng-container>
+    </div>
+
+    <!-- Footer row. -->
+    <div></div>
+    <div class="footer"></div>
+    <div></div>
+
+  </div>
+
+</div>
+
+
+<!-- Templates. -->
+<ng-template #green>  
+  <mat-icon class="green">check</mat-icon>
+</ng-template>
+
+<ng-template #red>  
+  <mat-icon class="red">close</mat-icon>
+</ng-template>
+
+<ng-template #headline>
+  <h1>Hvorfor velge <strong>Ladalt</strong>?</h1>
+</ng-template>
+
+<ng-template #image>
+  <!--<img src="./assets/img/p3-1-logo.png" />-->
+  <img src="./assets/img/why-choose1.png" />
+</ng-template>
+
+<ng-template #image2>
+  <img src="./assets/img/why-choose2.png" />
+</ng-template>
