@@ -1,0 +1,34 @@
+.wrapper {
+  background-color: black;
+  color: white;
+  padding: 1em 2em;
+}
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: left;
+}
+
+.grid.is-medium, .grid.is-small {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: auto;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logo.is-medium, .logo.is-small {
+  text-align: center;
+}

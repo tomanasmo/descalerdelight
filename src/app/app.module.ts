@@ -17,6 +17,7 @@ import { M10DraftModule } from './m10-draft/m10-draft.module';
 import { M11FaqModule } from './m11-faq/m11-faq.module';
 import { M12WhyChooseModule } from './m12-why-choose/m12-why-choose.module';
 import { M13WhatsInsideModule } from './m13-whats-inside/m13-whats-inside.module';
+import { M30FooterModule } from './m30-footer/m30-footer.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { M13WhatsInsideModule } from './m13-whats-inside/m13-whats-inside.module
     M10DraftModule,
     M11FaqModule,
     M12WhyChooseModule,
-    M13WhatsInsideModule
+    M13WhatsInsideModule,
+    M30FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

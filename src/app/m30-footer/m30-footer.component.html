@@ -1,0 +1,39 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="logo" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+      <ng-container *ngTemplateOutlet="logo"></ng-container>
+    </div>
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <div class="item1">
+        <h4>INFO</h4>
+        <p>Vilkår</p>
+        <p>Personvern</p>
+        <p>Leveringsvilkår</p>
+      </div>
+      <div class="item2">
+        <h4>BESTILLING</h4>
+        <p>Spor bestilling</p>
+        <p>Retur og reklamasjon</p>
+        <p>Vanlige spørsmål</p>
+      </div>
+      <div class="item3">
+        <h4>KUNDETJENESTE</h4>
+        <p>Kontakt oss:</p>
+        <p>WhatsApp</p>
+        <p>support@ladalt.com</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Logo. -->
+<ng-template #logo>
+  <img src="./assets/img/logo-white.svg" />
+</ng-template>
