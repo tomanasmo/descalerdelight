@@ -1,0 +1,75 @@
+<div class="wrapper"> 
+
+  <div class="outer-grid">
+
+    <h1>Her er grunnene til at <strong>Ladalt</strong> er den <strong>ultimate laderen</strong></h1>
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <div *ngIf="!isBig" class="tom">
+        <img style="width: 100%;" src="./assets/img/p2.png" />
+      </div>
+
+      <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">devices</mat-icon>
+        <p>
+          <strong>Full støtte</strong>
+          <br/>
+          Samme lader til alt.
+        </p>
+      </div>
+
+      <div class="item2" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">power</mat-icon>
+        <p>
+          <strong>Spar plass</strong>
+          <br/>
+          Frigjør stikkontakter.
+        </p>
+      </div>
+
+      <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">charging_station</mat-icon>
+        <p>
+          <strong>Stor kapasitet</strong>
+          <br/>
+          Aldri let etter lading.
+        </p>
+      </div>
+      
+      <div *ngIf="isBig" class="middle">
+        <img style="width: 100%; z-index: 2;" src="./assets/img/p2.png" />
+      </div>
+
+      <div class="item4" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">memory</mat-icon>
+        <p>
+          <strong>Sikker</strong>
+          <br/>
+          Multippel beskyttelse.
+        </p>
+      </div>
+
+      <div class="item5" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">watch</mat-icon>
+        <p>
+          <strong>Frigjør tid</strong>
+          <br/>
+          Finn lading med en gang.
+        </p>
+      </div>
+
+      <div class="item6" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+        <mat-icon class="icon-align">eco</mat-icon>
+        <p>
+          <strong>Lav vekt</strong>
+          <br/>
+          Minimalt miljøavtrykk.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

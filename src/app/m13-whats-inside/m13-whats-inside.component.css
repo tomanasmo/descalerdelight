@@ -1,0 +1,115 @@
+.wrapper {
+  padding: 1em 1em 3em;
+  background-color: white;
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;
+}
+
+/* Outer grid */
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;  
+  /*background-color: rgb(195, 195, 195);
+  background-color: black;
+  color: white;*/
+}
+
+/* Grid. */
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 45% auto;
+  /*margin: 5em;*/
+  align-items: center;
+  background: url(src/assets/img//icon-gray.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.tom {
+  background: url(src/assets/img//icon-gray.svg) no-repeat center center;
+  background-size: contain;
+}
+
+.grid.is-medium, .grid.is-small {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: auto;
+  background: none;
+}
+
+.item1.is-medium, .item1.is-small,
+.item2.is-medium, .item2.is-small,
+.item3.is-medium, .item3.is-small,
+.item4.is-medium, .item4.is-small,
+.item5.is-medium, .item5.is-small,
+.item6.is-medium, .item6.is-small {
+  grid-column: unset;
+  grid-row: unset;
+  justify-self: center;
+  padding: 0;
+}
+
+.item1, .item2, .item3 {
+  grid-column: 1;
+}
+
+.item1, .item3 {
+  justify-self: right;
+  padding-left: 5em;
+}
+
+.item2, .item5 {
+  justify-self: center;
+}
+
+p {
+  text-align: center;
+}
+
+.middle {
+  /*background: url(src/assets/img//icon-gray.svg) no-repeat center center;  
+  background-size: contain;*/
+  z-index: 1;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+}
+
+.item4, .item6 {
+  justify-self: left;
+  padding-right: 5em;
+}
+
+.item4, .item5, .item6 {
+  grid-column: 3;
+}
+
+.item4 {
+  grid-row: 1;
+}
+
+.item5 {
+  grid-row: 2;
+}
+
+.item6 {
+  grid-row: 3;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.icon-align {
+  font-weight: normal;
+  color: gray;
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+  width: 100%;
+  height: 100%;  
+  font-size: 3em;
+  text-align: center;
+}

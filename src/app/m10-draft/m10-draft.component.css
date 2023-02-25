@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: 50% 50%;/*0.3fr 0.7fr;*/
   justify-items: center;
-  align-items: center;
   /*padding: 1em 0;*/
   gap: 40px;
   padding: 1em 2em;

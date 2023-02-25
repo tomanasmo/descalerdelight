@@ -16,6 +16,7 @@ import { M9DraftModule } from './m9-draft/m9-draft.module';
 import { M10DraftModule } from './m10-draft/m10-draft.module';
 import { M11FaqModule } from './m11-faq/m11-faq.module';
 import { M12WhyChooseModule } from './m12-why-choose/m12-why-choose.module';
+import { M13WhatsInsideModule } from './m13-whats-inside/m13-whats-inside.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { M12WhyChooseModule } from './m12-why-choose/m12-why-choose.module';
     M9DraftModule,
     M10DraftModule,
     M11FaqModule,
-    M12WhyChooseModule
+    M12WhyChooseModule,
+    M13WhatsInsideModule
   ],
   providers: [],
   bootstrap: [AppComponent]
