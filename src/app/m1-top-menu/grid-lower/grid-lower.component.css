@@ -19,6 +19,10 @@ a:hover {
   text-decoration: underline;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Grid. */
 
 .grid.is-medium {

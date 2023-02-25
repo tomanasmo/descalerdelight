@@ -1,3 +1,10 @@
+.wrapper {
+  padding: 1em 2em;
+  background-color: white;
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;  
+}
+
 /* Outer grid */
 
 .outer-grid {
@@ -18,7 +25,7 @@
   align-items: center;
   /*padding: 1em 0;*/
   gap: 40px;  
-  padding: 1em 2em;
+  /*padding: 1em 2em;*/
 }
 
 .grid.is-medium, .grid.is-small {
@@ -26,7 +33,7 @@
   grid-template-columns: none;
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 0 15%;
+  /*padding: 0 15%;*/
   gap: 0;
 }
 
@@ -51,13 +58,6 @@ h1 {
   font-weight: normal;
 }
 
-.wrapper {
-  padding: 1em 2em;
-  background-color: white;
-  /*background-color: rgb(195, 195, 195);*/
-  color: black;  
-}
-
 h3 {
   margin: 0;
 }
@@ -66,10 +66,10 @@ h3 {
   padding: 1em 0 2em;
 }*/
 
-.test img {
+/*.test img {
   width: 80%;
   margin: 0 auto;
-}
+}*/
 
 .order-now2 {
   background-color: rgb(14, 209, 61);

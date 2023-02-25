@@ -1,0 +1,41 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <h1>Spor din bestilling</h1>
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">    
+
+      <div class="item1">
+        <p><label>Ordrenummer:</label></p>
+        <p><input [(ngModel)]='trackingNumber' type="text" id="trackingNumber" name="trackingNumber"></p>        
+        <p><button (click)="findMyOrder()">FINN MIN BESTILLING</button></p>
+        <P>Du har mottatt ordrenummeret ditt i eposten fra oss som bekreftet din bestilling.</P>        
+      </div>
+
+      <hr *ngIf="!isBig"/>
+
+      <div class="item2">
+        <div *ngIf="hasRoutes; else noRoutesFound">
+          <p>Status: {{ cjTrackingData?.data[0]?.trackingStatus }}</p>
+        
+            <table>
+              <tr *ngFor='let route of routes'>
+                <!--<td>{{ route.acceptAddress }}</td>-->
+                <td>{{ route.acceptTime }}</td>
+                <td>{{ route.remark }}</td>
+              </tr>
+            </table>
+        </div> 
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #noRoutesFound>
+  <!--<p>No tracking information found. Please check your order number.</p>-->
+  <p></p>
+</ng-template>

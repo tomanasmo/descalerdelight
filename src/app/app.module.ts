@@ -18,6 +18,10 @@ import { M11FaqModule } from './m11-faq/m11-faq.module';
 import { M12WhyChooseModule } from './m12-why-choose/m12-why-choose.module';
 import { M13WhatsInsideModule } from './m13-whats-inside/m13-whats-inside.module';
 import { M30FooterModule } from './m30-footer/m30-footer.module';
+import { M40TrackOrderModule } from './m40-track-order/m40-track-order.module';
+import { M50LandingPageModule } from './m50-landing-page/m50-landing-page.module';
+import { M60ContactModule } from './m60-contact/m60-contact.module';
+import { M70OrderModule } from './m70-order/m70-order.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { M30FooterModule } from './m30-footer/m30-footer.module';
     M11FaqModule,
     M12WhyChooseModule,
     M13WhatsInsideModule,
-    M30FooterModule
+    M30FooterModule,
+    M40TrackOrderModule,
+    M50LandingPageModule,
+    M60ContactModule,
+    M70OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
