@@ -81,3 +81,11 @@ h3 {
   width: fit-content;
   border-radius: 5px;
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}

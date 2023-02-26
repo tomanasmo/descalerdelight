@@ -22,6 +22,7 @@ import { M40TrackOrderModule } from './m40-track-order/m40-track-order.module';
 import { M50LandingPageModule } from './m50-landing-page/m50-landing-page.module';
 import { M60ContactModule } from './m60-contact/m60-contact.module';
 import { M70OrderModule } from './m70-order/m70-order.module';
+import { M6StickyBarModule2 } from './_draft/m6-sticky-bar2/m6-sticky-bar.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { M70OrderModule } from './m70-order/m70-order.module';
     M5OneImageWithDescLeftAndBottomModule,
     M0CoreModule,
     M6StickyBarModule,
+    M6StickyBarModule2,
     M7OneImageWithDescRightAndTopModule,
     M8TrippleImagesAlternatingModule,
     M9DraftModule,

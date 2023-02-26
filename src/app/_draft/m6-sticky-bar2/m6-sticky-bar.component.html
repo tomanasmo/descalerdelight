@@ -1,8 +1,22 @@
-<div class="wrapper">
+<div class="wrapper">  
 
   <div class="outer-grid">
 
-    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <header>
+      <h1>A story about getting lost.</h1>
+    </header>
+    <nav id="main" #menu [ngClass]="{ 'fixed-nav': shouldStick$ | async }">
+      <ul>
+        <li class="logo"><a href="#">LOST.</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Images</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Maps</a></li>
+      </ul>
+    </nav>
+
+    <!--<div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" #menu [ngClass]="{ 'fixed-nav': shouldStick$ | async }">
 
       <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
         <ng-container *ngTemplateOutlet="logo"></ng-container>
@@ -16,7 +30,7 @@
         <a class="order-now2" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ -{{ discountPercent}}% I RABATT</a>
       </div>
 
-    </div>
+    </div>-->
 
   </div>
 

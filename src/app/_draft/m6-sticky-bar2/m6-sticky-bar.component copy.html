@@ -1,8 +1,8 @@
-<div class="wrapper">
+<div class="wrapper">  
 
   <div class="outer-grid">
 
-    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}" #menu [ngClass]="{ 'fixed-nav': shouldStick$ | async }">
 
       <div class="item1" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
         <ng-container *ngTemplateOutlet="logo"></ng-container>

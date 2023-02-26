@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { M6StickyBarComponent } from './m6-sticky-bar.component';
+import { M6StickyBarComponent2 } from './m6-sticky-bar.component';
 import { Routes, RouterModule } from '@angular/router';
-import { M70OrderComponent } from '../m70-order/m70-order.component';
+import { M70OrderComponent } from '../../m70-order/m70-order.component';
 import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [
@@ -16,7 +16,7 @@ const materialModules = [
 
 @NgModule({
   declarations: [
-    M6StickyBarComponent
+    M6StickyBarComponent2
   ],
   imports: [
     CommonModule,
@@ -24,7 +24,7 @@ const materialModules = [
     RouterModule.forChild(routes)
   ],
   exports: [
-    M6StickyBarComponent
+    M6StickyBarComponent2
   ]
 })
-export class M6StickyBarModule { }
+export class M6StickyBarModule2 { }

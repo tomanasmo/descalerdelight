@@ -84,6 +84,13 @@ img {
   width: 70%;
 }
 
+.grid.fixed-nav {
+  display: block;
+  position: fixed;
+  background-color: yellow;
+  /*box-shadow: 0 5px 0 rgba(0,0,0,0.1);*/
+}
+
 /*
 Måten brukt her:
   https://medium.com/@chiodigiovanni1/a-simple-on-scroll-sticky-menu-with-angular-and-bulma-66fafc7fc7b9
