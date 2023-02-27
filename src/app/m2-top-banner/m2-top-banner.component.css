@@ -1,8 +1,8 @@
 /* Outer grid */
 
 .outer-grid {
-  background: url(/assets/img/mockup/m2-1.png) no-repeat center center;
-  /*background: url(/assets/img/poster.jpg) no-repeat center center;*/
+  /*background: url(/assets/img/mockup/m2-1.png) no-repeat center center;*/
+  background: url(/assets/img/shutterstock/ss1.jpg) no-repeat center center;
   background-size: cover;
   display: grid;
   grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
@@ -40,7 +40,7 @@
 /* Item1. */
 
 .item1 {
-  text-align: center;
+  text-align: center;  
 }
 
 /* Item2. */

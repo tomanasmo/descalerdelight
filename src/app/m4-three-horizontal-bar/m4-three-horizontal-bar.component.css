@@ -17,7 +17,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-items: center;
   align-items: start;
   /*padding: 1em 0;*/
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: none;
   grid-template-rows: 1fr;
-  padding: 0 15%;  
+  /*padding: 0 15%;  */
   gap: 0;
 }
 

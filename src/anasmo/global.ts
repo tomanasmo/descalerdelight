@@ -1,6 +1,6 @@
 export class AnasmoGlobals {
-  public static PRODUCT_NAME = "Quick Charger";
-  public static PRODUCT_NAME_PLURAL = "Quick Chargers";
+  public static PRODUCT_NAME = "Lader";
+  public static PRODUCT_NAME_PLURAL = "Ladere";
   public static DISCOUNT = 0.7;
   public static DISCOUNT_PERCENT = this.DISCOUNT * 100;
   public static CURRENCY_SYMBOL = "kr";

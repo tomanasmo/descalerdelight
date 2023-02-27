@@ -1,1 +1,51 @@
-<p>m70-order works!</p>
+<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}"> 
+  <div class="outer-grid">
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+      <div class="item1">
+        <app-step0></app-step0>
+        <br/>
+        <div><hr/></div>
+        <app-step1></app-step1>
+      </div>
+      <div class="item2">
+        <p>Smartchip</p>
+        <p>Nok lading til alle</p>
+        <p>Miljøvennlig</p>
+        <br/>
+        <div><hr/></div>
+
+        <p>DU VIL BLABLABLA</p>
+
+        
+
+        <div><hr/></div>
+
+        <div style="padding: 1em 0; display: grid; grid-template-columns: auto auto; gap: 5px; font-size: 0.7em; font-weight: 800;">
+          
+          <div>
+            <input type="checkbox" id="1" name="1" value="1">
+          </div>
+          <div>
+            <label for="1"> Jeg godtar å motta markedsføringsinfo om produktene deres.</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="2" name="2" value="2">
+          </div>
+          <div>
+            <label for="2"> Jeg godtar å motta en tekstmelding om bestillingsstatusen min, andre ordrebeslektede nyheter og markedsføringsinfo.</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="3" name="3" value="3">
+          </div>
+          <div>
+            <label for="3"> Jeg bekrefter at jeg har lest og godtatt Brukervilkår og Retningslinjer for personvern.</label>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

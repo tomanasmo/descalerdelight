@@ -52,6 +52,7 @@ a {
 .item1.is-medium img, .item1.is-small img {
   display: block;
   margin: 0 auto;
+  width: 40%;
 }
 
 mat-icon {
@@ -98,3 +99,9 @@ Annen kul måte:
   overflow: hidden;
   z-index: 10;  
 }*/
+
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}

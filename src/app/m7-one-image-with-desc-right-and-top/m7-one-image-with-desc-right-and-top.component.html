@@ -16,7 +16,7 @@
 
       <div class="item2">
 
-        <h1 *ngIf="isBig">Trygg og stabil <strong>lading overalt</strong> er avgjørende for enhver husholdning</h1>
+        <div *ngIf="isBig"><ng-container *ngTemplateOutlet="headline"></ng-container></div>
         
         <!--<div *ngIf="isMedium || isSmall">
           <ng-container *ngTemplateOutlet="image"></ng-container>
@@ -48,14 +48,20 @@
 <!-- Image. -->
 <ng-template #image1>
   <!--<img src="./assets/img/p3-1-logo.png" />-->
-  <img src="./assets/img/mockup/m7-1.png" />
+  <!--<img src="./assets/img/mockup/m7-1.png" />-->  
+  <!--<img src="./assets/img/shutterstock/ss2.jpg" />
+  <img src="./assets/img/shutterstock/ss10.jpg" />-->
+  <img src="./assets/img/shutterstock/Picture29.png" />
 </ng-template>
 
 <ng-template #image2>
   <!--<img src="./assets/img/p3-2-logo.png" />-->
-  <img src="./assets/img/mockup/m7-1.png" />
+  <!--<img src="./assets/img/mockup/m7-1.png" />-->
+  <!--<img src="./assets/img/shutterstock/ss2.jpg" />
+  <img src="./assets/img/shutterstock/ss10.jpg" />-->
+  <img src="./assets/img/shutterstock/Picture29-2.png" />
 </ng-template>
 
 <ng-template #headline>
-  <h1><strong>Lett tilgjengelig lading</strong> du er trygg på er avgjørende for enhver husholdning</h1>
+  <h1>Trygg og stabil <strong>lading overalt</strong> er avgjørende for enhver husholdning</h1>
 </ng-template>

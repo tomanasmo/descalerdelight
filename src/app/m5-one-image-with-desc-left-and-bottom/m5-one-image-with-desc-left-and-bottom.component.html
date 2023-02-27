@@ -11,7 +11,7 @@
 
       <div class="item2">
 
-        <h1>Hvordan <strong>Ladalt</strong> hjelper deg å <strong>lade med en gang</strong></h1>
+        <h1>Hvordan Ladalt hjelper deg å <strong>lade med en gang</strong></h1>
         
         <p>Med sine kvadruple porter får du muligheten til å lade 4x så mange enheter samtidig som en standard lader med kun 1 port.</p>
 
@@ -23,7 +23,7 @@
 
       <!-- Show this only if big screen. -->
       <div *ngIf="isMedium || isSmall" class="item1">
-        <ng-container *ngTemplateOutlet="image"></ng-container>
+        <ng-container *ngTemplateOutlet="image2"></ng-container>
       </div>
     
     </div>
@@ -35,5 +35,12 @@
 <!-- Image. -->
 <ng-template #image>
   <!--<img src="./assets/img/p2.png" />-->
-  <img src="./assets/img/mockup/m5-1.png" />
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <img src="./assets/img/shutterstock/ss9.png" />
+</ng-template>
+
+<ng-template #image2>
+  <!--<img src="./assets/img/p2.png" />-->
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <img src="./assets/img/shutterstock/ss9-2.png" />
 </ng-template>

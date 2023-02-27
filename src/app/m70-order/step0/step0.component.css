@@ -1,0 +1,51 @@
+img {
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;  
+  grid-gap: 0px;
+}
+
+h6 {
+  color: rgb(220, 53, 69);
+  font-size: 1em;
+}
+
+.item1 {
+  grid-row: 1 / span 2;
+  align-self: center;  
+}
+
+.item2 {
+  align-self: flex-end;  
+}
+
+.item3 {
+  grid-column: unset;
+  align-self: flex-start;
+  
+}
+
+/* Phone Portrait */
+
+.wrapper.is-phone-portrait {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-gap: 0px;
+}
+
+.item1.is-phone-portrait {
+  grid-row: unset;
+  align-self: center;
+}
+
+.item2.is-phone-portrait {
+  align-self: center;
+}
+
+.item3.is-phone-portrait {
+  grid-column: 1 / span 2;
+  align-self: center;
+}

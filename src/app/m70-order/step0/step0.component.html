@@ -1,0 +1,23 @@
+<div class="wrapper" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+
+  <div class="item1" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+    <img src="./assets/img/banner2.png"/>
+  </div>  
+  
+  <div class="item2" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+    <h6>
+      <strong>{{ text[0] }} {{ discountPercent }}{{ text[1] }}</strong>
+    </h6>
+  </div>
+
+  <div class="item3" [ngClass]="{'is-phone-portrait': isPhonePortrait}">
+    <strong>{{ text[2] }}:
+      <span style="color: grey;">{{ productName }} {{ text[3] }}
+        <s>{{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</s>
+      </span> <span style="color: rgb(93, 204, 102);">
+        {{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} ({{ discountPercent }}% {{ text[4] }})
+      </span>
+    </strong>
+  </div>
+
+</div>

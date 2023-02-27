@@ -20,8 +20,10 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;/*0.3fr 0.7fr;*/
+  grid-template-columns: 0.5fr 0.5fr;/*0.3fr 0.7fr;*/
   justify-items: center;
+  /*grid-auto-rows: 1fr;*/
+  /*align-items: stretch;*/
   /*padding: 1em 0;*/
   gap: 0 30px;
   /*padding: 1em 2em;*/

@@ -1,5 +1,5 @@
 .wrapper {
-  padding: 1em 2em;
+  padding: 4em 2em;
   background-color: white;
   /*background-color: rgb(195, 195, 195);*/
   color: black;  
@@ -20,7 +20,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 0.3fr 0.7fr;
+  grid-template-columns: 0.4fr auto;
   justify-items: center;
   align-items: center;
   /*padding: 1em 0;*/

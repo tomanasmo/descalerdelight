@@ -13,12 +13,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-columns: auto auto;
   justify-items: center;
   align-items: center;
   /*padding: 1em 0;*/
   gap: 40px;  
-  padding: 1em 2em;
+  /*padding: 1em 2em;*/
 }
 
 .grid.is-medium, .grid.is-small {
@@ -26,7 +26,7 @@
   grid-template-columns: none;
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 0 15%;
+  /*padding: 0 15%;*/
   gap: 0;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .wrapper {
-  padding: 1em 0 2em;
+  padding: 1em 2em;
   /*background-color: black;*/
   background-color: rgb(195, 195, 195);
   color: black;
