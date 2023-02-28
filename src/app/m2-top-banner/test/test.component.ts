@@ -12,7 +12,7 @@ export class TestComponent implements OnInit {
   @Input() language: string = 'NO';
   text: any;
   textNo = [ "Rabatt", "Siste sjanse", "Siste dag til å benytte deg av dette FANTASTISKE tilbudet",
-   "FÅ", "I RABATT",  "-kun", "vs.", "(utsalgspris)", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
+   "FÅ", "I RABATT",  "-kun", "(normal utsalgspris", ")", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
   textEn = [ "MAKE IT SUPER", "EASY TO", "RECHARGE", "PEOPLE AROUND YOU" ];
 
   discountPercent = 85; //AnasmoGlobals.DISCOUNT_PERCENT;
