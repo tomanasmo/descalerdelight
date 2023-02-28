@@ -12,7 +12,7 @@ export class M2TopBannerComponent implements OnInit {
   @Input() language: string = 'NO';
   text: any;
   textNo = [ "Rabatt", "Siste sjanse", "Siste dag til å benytte deg av dette FANTASTISKE tilbudet",
-   "FÅ", "I RABATT",  "-kun", "vs.", "(butikkpris)", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
+   "FÅ", "I RABATT",  "-kun", "vs.", "(utsalgspris)", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
   textEn = [ "MAKE IT SUPER", "EASY TO", "RECHARGE", "PEOPLE AROUND YOU" ];
 
   discountPercent = AnasmoGlobals.DISCOUNT_PERCENT;

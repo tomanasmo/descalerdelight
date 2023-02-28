@@ -16,7 +16,7 @@ export class M40TrackOrderComponent implements OnInit {
   cjTrackingData: any;
   routes!: Routes[];
 
-  trackingNumber: string = "EQKPT8576968226YQ";
+  trackingNumber: string = ""; // = "EQKPT8576968226YQ";
   hasRoutes: boolean = false;
 
   isMedium = false;

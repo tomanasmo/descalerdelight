@@ -13,7 +13,7 @@
 .grid {
   display: grid;
   grid-template-columns: auto auto auto;
-  align-items: center;
+  align-items: start;
   justify-items: left;
 }
 
@@ -31,4 +31,8 @@
 
 .logo.is-medium, .logo.is-small {
   text-align: center;
+}
+
+a {
+  color: white;
 }

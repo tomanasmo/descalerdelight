@@ -1,0 +1,35 @@
+<div class="outer-grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+  <div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+  
+    <!-- Show this only if not big screen. -->
+    <div *ngIf="isMedium || isSmall" class="item1">
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>
+  
+    <div class="item2">
+      <div class="rabatt">{{ text[0] }}</div>
+      <span class="prosent">-{{ discountPercent }}%</span>
+      <p class="siste-sjanse">Begrenset til 100 stk</p>
+      <p class="siste-sjanse2">Test vårt nye produkt Ladalt til sterkt redusert pris - kun de 100 første får muligheten - vær rask!</p>
+      <!--<a class="order-now2" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[3] }} -{{ discountPercent}}% {{ text[4] }}</a>-->
+      <a class="order-now2" href="https://buy.stripe.com/test_3csdUieL0bZo94400g">{{ text[3] }} -85% {{ text[4] }}</a>
+      <p class="kun">{{ text[5] }} {{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[6] }} {{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[7] }}</p>
+      <p class="kun">{{ text[8] }}</p>
+      <p class="kun">{{ text[9] }}</p>
+    </div>
+  
+    <!-- Show this only if big screen. -->
+    <div *ngIf="!isMedium && !isSmall">
+      <ng-container *ngTemplateOutlet="image"></ng-container>
+    </div>
+  
+  </div>
+  
+  </div>
+  
+  <!-- Image. -->
+  <ng-template #image>
+    <!--<img src="./assets/img/mockup/m2-2.png" />-->
+    <img src="./assets/img/poster1-v2.png" />
+  </ng-template>

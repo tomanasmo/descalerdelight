@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { M1TopMenuComponent } from '../m1-top-menu.component';
+import { AnasmoGlobals } from 'src/anasmo/global';
 
 @Component({
   selector: 'app-grid-lower',
