@@ -42,3 +42,10 @@ a:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+
+.copy {
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: small;
+}

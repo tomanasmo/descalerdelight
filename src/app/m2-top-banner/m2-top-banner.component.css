@@ -13,7 +13,9 @@
 }
 
 .outer-grid.is-medium, .outer-grid.is-small {
-  background: none; /*url(/assets/img/Picture48.png) no-repeat center center;*/
+  /*background: none;*/ /*url(/assets/img/Picture48.png) no-repeat center center;*/
+  background: url(/assets/img/Picture48.png) no-repeat center center;
+  background-size: cover;
   background-color: rgb(195, 195, 195);
 }
 

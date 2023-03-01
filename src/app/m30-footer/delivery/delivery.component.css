@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 1em 2em 3em;
+  background-color: white;
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;
+}
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;  
+  /*background-color: rgb(195, 195, 195);
+  background-color: black;
+  color: white;*/
+}
