@@ -15,9 +15,9 @@ export class TestComponent implements OnInit {
    "FÅ", "I RABATT",  "-kun", "(normal utsalgspris", ")", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
   textEn = [ "MAKE IT SUPER", "EASY TO", "RECHARGE", "PEOPLE AROUND YOU" ];
 
-  discountPercent = 85; //AnasmoGlobals.DISCOUNT_PERCENT;
-  prices = [199]; //AnasmoGlobals.PRICES;
-  beforePrices = [1317]; //AnasmoGlobals.BEFORE_PRICES;
+  discountPercent = 90; //AnasmoGlobals.DISCOUNT_PERCENT;
+  prices = [110]; //AnasmoGlobals.PRICES;
+  beforePrices = [1053]; //AnasmoGlobals.BEFORE_PRICES;
   currencySymbol = AnasmoGlobals.CURRENCY_SYMBOL;
   
   isMedium = false;

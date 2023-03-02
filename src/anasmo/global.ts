@@ -2,7 +2,7 @@ export class AnasmoGlobals {
   public static PRODUCT_NAME = "Lader";
   public static PRODUCT_NAME_PLURAL = "Ladere";
   //public static DISCOUNT = 0.7;
-  public static DISCOUNT = 0.85;
+  public static DISCOUNT = 0.90;
   public static DISCOUNT_PERCENT = this.DISCOUNT * 100;
   public static CURRENCY_SYMBOL = "kr";
   public static PRICES = [395, 695, 895, 995];
