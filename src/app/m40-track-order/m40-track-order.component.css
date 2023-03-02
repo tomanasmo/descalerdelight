@@ -54,3 +54,16 @@ table, th, td
   border: 1px solid black;
   /*border-collapse: collapse;*/ /*Remove double border.*/
 }
+
+/*img {
+  display: block;
+  width: fit-content;
+  height: 200px;
+}*/
+
+.test {
+  display: grid;
+  grid-auto-rows: auto;
+  height: 250px;
+  background: url(/assets/img/shutterstock/ss20.jpg) no-repeat center center;
+}

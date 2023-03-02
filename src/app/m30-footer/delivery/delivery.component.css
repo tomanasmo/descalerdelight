@@ -13,3 +13,12 @@
   background-color: black;
   color: white;*/
 }
+
+a {
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
