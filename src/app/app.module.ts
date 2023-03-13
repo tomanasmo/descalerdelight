@@ -23,6 +23,7 @@ import { M50LandingPageModule } from './m50-landing-page/m50-landing-page.module
 import { M60ContactModule } from './m60-contact/m60-contact.module';
 import { M70OrderModule } from './m70-order/m70-order.module';
 import { M6StickyBarModule2 } from './_draft/m6-sticky-bar2/m6-sticky-bar.module';
+import { M14LiveMatchModule } from './m14-live-match/m14-live-match.module';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { M6StickyBarModule2 } from './_draft/m6-sticky-bar2/m6-sticky-bar.module
     M11FaqModule,
     M12WhyChooseModule,
     M13WhatsInsideModule,
+    M14LiveMatchModule,
     M30FooterModule,
     M40TrackOrderModule,
     M50LandingPageModule,

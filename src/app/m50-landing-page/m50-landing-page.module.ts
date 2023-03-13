@@ -13,6 +13,7 @@ import { M11FaqModule } from '../m11-faq/m11-faq.module';
 import { M12WhyChooseModule } from '../m12-why-choose/m12-why-choose.module';
 import { M13WhatsInsideModule } from '../m13-whats-inside/m13-whats-inside.module';
 import { M5OneImageWithDescLeftAndBottomModule } from '../m5-one-image-with-desc-left-and-bottom/m5-one-image-with-desc-left-and-bottom.module';
+import { M14LiveMatchModule } from '../m14-live-match/m14-live-match.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { M5OneImageWithDescLeftAndBottomModule } from '../m5-one-image-with-desc
     M10DraftModule,
     M11FaqModule,
     M12WhyChooseModule,
-    M13WhatsInsideModule
+    M13WhatsInsideModule,
+    M14LiveMatchModule
   ],
   exports: [
     M50LandingPageComponent

@@ -1,7 +1,7 @@
 .wrapper {
   padding: 1em 1em 3em;
   /*background-color: white;*/
-  background-color: rgb(195, 195, 195);
+  /*background-color: rgb(195, 195, 195);*/
   color: black;
 }
 
@@ -101,7 +101,8 @@
 /* General. */
 
 .diffColor {
-  background-color: white;
+  /*background-color: white;*/
+  background-color: rgb(195, 195, 195);
 }
 
 h1 {

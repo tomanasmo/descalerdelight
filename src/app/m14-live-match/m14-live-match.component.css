@@ -1,0 +1,173 @@
+.wrapper {
+  padding: 1em 1em 3em;
+  /*background-color: white;*/
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;
+}
+
+/* Outer grid */
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;
+  /*background-color: rgb(195, 195, 195);
+  background-color: black;
+  color: white;*/
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /*grid-template-rows: 100%;*/
+  /*justify-items: center;
+  background-color: white;*/
+}
+
+/* Grid. */
+
+.grid {
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+}
+
+.left {
+  padding-right: 0.5em;
+}
+
+.right {
+  padding-left: 0.5em;
+}
+
+.left.is-medium, .left.is-small, .right.is-medium, .right.is-small {
+  padding: 0;
+}
+
+.grid2.is-small, .grid2.is-medium {
+  display: grid;
+  grid-template-columns: unset;
+  grid-template-rows: auto;
+  gap: unset;
+}
+
+/*.grid.is-small, .grid.is-medium {
+  display: grid;
+  grid-template-columns: unset;
+  grid-template-rows: 100%;  
+}*/
+
+.item1 {
+  height: 100%;
+  /*padding-right: 1em;*/
+  /*background-color: black;
+  color: white;*/
+}
+
+.item1, .item3 {  
+  background-color: rgb(195, 195, 195);
+}
+
+.item2, .item3 {
+  height: 100%;
+}
+
+/*.item1 p {
+  padding: 0 1em;
+}*/
+
+.img1 {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+}
+
+.img2 {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 100%;
+}
+
+.img3 {
+  /*position: absolute;
+  bottom: 0;*/
+  width: 90%;
+}
+
+.header {
+  height: 100%;
+  /*border-left:black solid 3px;
+  border-right:black solid 3px;
+  border-top:black solid 3px;*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: black;
+  /*position: relative;*/ /* To be able to bottom position header image. */
+}
+
+.header2 {
+  height: 100%;
+  position: relative; /* To be able to bottom position header image. */
+}
+
+
+.footer {
+  height: 100%;
+  /*border-left:black solid 3px;
+  border-right:black solid 3px;
+  border-bottom:black solid 3px;*/
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: black;
+}
+
+.header img, .header2 img {
+  position: absolute;  
+  bottom: 0;
+  /*height: 5em;*/
+  width: 100%;
+}
+
+.item2 {
+  background-color: black;
+  color: white;
+  /*border-left:black solid 3px;
+  border-right:black solid 3px;*/
+}
+
+.smallText {
+  font-size: 0.5em;
+}
+
+.bigNo {
+  font-size: 2em;
+}
+
+.icon-align {
+  /*font-weight: 900;*/
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+  width: 100%;
+  height: 100%;  
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.green {
+  color: rgb(84, 176, 0);
+}
+
+.red {
+  color: rgb(219, 26, 0);  
+}
+
+/* General. */
+
+.diffColor {
+  background-color: white;
+}
+
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
