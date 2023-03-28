@@ -3,7 +3,7 @@
 .outer-grid {
   /*background: url(/assets/img/mockup/m2-1.png) no-repeat center center;*/
   /*background: url(/assets/img/shutterstock/ss1.jpg) no-repeat center center;*/
-  background: url(/assets/img/Picture48.png) no-repeat center center;
+  background: url(/assets/img/m2-top-banner-background1.png) no-repeat center center;
   background-color: rgb(195, 195, 195);
   background-size: cover;
   display: grid;
@@ -14,7 +14,7 @@
 
 .outer-grid.is-medium, .outer-grid.is-small {
   /*background: none;*/ /*url(/assets/img/Picture48.png) no-repeat center center;*/
-  background: url(/assets/img/Picture48-2.png) no-repeat center center;
+  background: url(/assets/img/m2-top-banner-background2.png) no-repeat center center;
   background-size: cover;
   background-color: rgb(195, 195, 195);  
 }
