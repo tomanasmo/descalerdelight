@@ -9,4 +9,6 @@ import { AnasmoGlobals } from 'src/anasmo/global';
 })
 export class GridLowerComponent extends M1TopMenuComponent {
 
+  stripeLink = AnasmoGlobals.STRIPE_LINK;
+
 }

@@ -10,6 +10,7 @@ import { AnasmoGlobals } from 'src/anasmo/global';
 export class M6StickyBarComponent implements OnInit {
 
   discountPercent = AnasmoGlobals.DISCOUNT_PERCENT;
+  stripeLink = AnasmoGlobals.STRIPE_LINK;
 
   isMedium = false;
   isSmall = false;

@@ -19,6 +19,7 @@ export class M2TopBannerComponent implements OnInit {
   prices = AnasmoGlobals.PRICES;
   beforePrices = AnasmoGlobals.BEFORE_PRICES;
   currencySymbol = AnasmoGlobals.CURRENCY_SYMBOL;
+  stripeLink = AnasmoGlobals.STRIPE_LINK;
   
   isMedium = false;
   isSmall = false;
