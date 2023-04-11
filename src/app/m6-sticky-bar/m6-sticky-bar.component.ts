@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AnasmoGlobals } from 'src/anasmo/global';
+import { PixelService } from 'ngx-pixel';
+
+declare var gtag: (arg0: string, arg1: string, arg2: { event_category: string; event_label: string; value: string; }) => void;
 
 @Component({
   selector: 'app-m6-sticky-bar',
@@ -9,7 +12,7 @@ import { AnasmoGlobals } from 'src/anasmo/global';
 })
 export class M6StickyBarComponent implements OnInit {
 
-  discountPercent = AnasmoGlobals.DISCOUNT_PERCENT;
+  discountPercent = AnasmoGlobals.BUTTON_DISCOUNT_PERCENT;
   stripeLink = AnasmoGlobals.STRIPE_LINK;
 
   isMedium = false;
@@ -19,7 +22,7 @@ export class M6StickyBarComponent implements OnInit {
   smallScreenBreakpoints = "(max-width: 549.98px)";
   mediumScreenBreakpoints = "(min-width: 550px) and (max-width: 749.98px)";
 
-  constructor(private responsive: BreakpointObserver) {}
+  constructor(private responsive: BreakpointObserver, private pixel: PixelService) {}
   
   ngOnInit() {
 
@@ -45,6 +48,22 @@ export class M6StickyBarComponent implements OnInit {
           this.isBig = true;
         }
 
+    });
+  }
+
+  doTracking() {
+
+    console.log("GTracking!");
+    gtag('event', 'CTA_M6_STICKY_BAR_BUTTON_CLICKED', {
+      'event_category': 'CTA_BUTTON_CLICK',
+      'event_label': 'CTA_M6_STICKY_BAR_BUTTON_CLICKED',
+      'value': 'CTA_M6_STICKY_BAR_BUTTON_CLICKED'   });
+
+    // FB pixel.
+    console.log("PTracking!");    
+    this.pixel.track('InitiateCheckout', {
+      value: 211,
+      currency: 'NOK'
     });
   }
 }

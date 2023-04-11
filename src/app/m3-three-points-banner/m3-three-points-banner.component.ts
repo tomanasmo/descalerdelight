@@ -15,7 +15,7 @@ export class M3ThreePointsBannerComponent implements OnInit {
    "FÅ", "I RABATT",  "-kun", "vs.", "(butikkpris)", "-kun tilgjengelig på nett", "-så lenge lageret rekker" ];
   textEn = [ "MAKE IT SUPER", "EASY TO", "RECHARGE", "PEOPLE AROUND YOU" ];
 
-  discountPercent = AnasmoGlobals.DISCOUNT_PERCENT;
+  discountPercent = AnasmoGlobals.BUTTON_DISCOUNT_PERCENT;
   prices = AnasmoGlobals.PRICES;
   beforePrices = AnasmoGlobals.BEFORE_PRICES;
   currencySymbol = AnasmoGlobals.CURRENCY_SYMBOL;

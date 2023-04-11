@@ -2,6 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { M1TopMenuService } from './m1-top-menu.service'
+import { PixelService } from 'ngx-pixel';
+
+declare var gtag: (arg0: string, arg1: string, arg2: { event_category: string; event_label: string; value: string; }) => void;
 
 @Component({
   selector: 'app-m1-top-menu',
@@ -12,7 +15,7 @@ export class M1TopMenuComponent implements OnInit {
 
   @Input() language: string = "NO";
   text: any;
-  textNo = [ "SPOR BESTILLING", "KONTAKT OSS", "BESTILL NÅ!" ];
+  textNo = [ "SPOR BESTILLING", "KONTAKT OSS", "PRØV NÅ!" ];
   textEn = [ "TRACK ORDER", "CONTACT", "ORDER NOW!" ];
   
   isMedium = false;
@@ -22,7 +25,7 @@ export class M1TopMenuComponent implements OnInit {
   smallScreenBreakpoints = "(max-width: 549.98px)";
   mediumScreenBreakpoints = "(min-width: 550px) and (max-width: 749.98px)";
 
-  constructor(private responsive: BreakpointObserver, private m1TopMenuService: M1TopMenuService) {}
+  constructor(private responsive: BreakpointObserver, private m1TopMenuService: M1TopMenuService, private pixel: PixelService) {}
   /*constructor(responsive: BreakpointObserver, private m1TopMenuService: M1TopMenuService) {
     super(responsive);
   }*/
@@ -35,6 +38,23 @@ export class M1TopMenuComponent implements OnInit {
 
   doToggle(): void {
     this.m1TopMenuService.doToggle();
+  }
+
+  doTracking() {
+
+    // Google Analytics.
+    console.log("GTracking!");
+    gtag('event', 'CTA_M1_TOP_MENU_BUTTON_CLICKED', {
+      'event_category': 'CTA_BUTTON_CLICK',
+      'event_label': 'CTA_M1_TOP_MENU_BUTTON_CLICKED',
+      'value': 'CTA_M1_TOP_MENU_BUTTON_CLICKED'   });
+
+   // FB pixel.
+   console.log("PTracking!");
+    this.pixel.track('InitiateCheckout', {
+      value: 211,
+      currency: 'NOK'
+    });
   }
 
   ngOnInit() {

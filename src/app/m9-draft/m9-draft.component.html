@@ -20,7 +20,7 @@
 
         <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
           <!--<a class="order-now2" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ -{{ discountPercent}}% I RABATT</a>-->
-          <a class="order-now2" href="https://buy.stripe.com/{{stripeLink}}">FÅ -{{ discountPercent}}% I RABATT</a>          
+          <a class="order-now2" (click)="doTracking()" href="https://buy.stripe.com/{{stripeLink}}">FÅ -{{ discountPercent}}% I RABATT</a>          
         </div>
       
       </div>      
