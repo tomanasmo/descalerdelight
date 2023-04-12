@@ -35,7 +35,7 @@ import { PixelModule } from 'ngx-pixel';
     BrowserModule,
     /*AngularFireModule.initializeApp(firebaseConfig),*/
     /*AngularFireAnalyticsModule,*/
-    PixelModule.forRoot({ enabled: true, pixelId: '745575667279846' }),
+    PixelModule.forRoot({ enabled: true, pixelId: '1293114901562517' }),
     AppRoutingModule,    
     BrowserAnimationsModule,
     M1TopMenuModule,
