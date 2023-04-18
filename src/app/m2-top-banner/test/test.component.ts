@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { AnasmoGlobals } from 'src/anasmo/global';
 import { PixelService } from 'ngx-pixel';
+import { HttpClient } from "@angular/common/http";
 
 declare var gtag: (arg0: string, arg1: string, arg2: { event_category: string; event_label: string; value: string; }) => void;
 
@@ -33,7 +34,7 @@ export class TestComponent implements OnInit {
   smallScreenBreakpoints = "(max-width: 549.98px)";
   mediumScreenBreakpoints = "(min-width: 550px) and (max-width: 749.98px)";
 
-  constructor(private responsive: BreakpointObserver, private pixel: PixelService) {}
+  constructor(private responsive: BreakpointObserver, private pixel: PixelService, private http:HttpClient) {}
   
   ngOnInit() {
 
@@ -84,5 +85,8 @@ export class TestComponent implements OnInit {
       value: 211,
       currency: 'NOK'
     });
+
+    // Prøv API her!
+    
   }
 }
