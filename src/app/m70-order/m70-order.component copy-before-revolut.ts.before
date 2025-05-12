@@ -1,0 +1,126 @@
+import { Component, Input, OnInit, ElementRef, Renderer2, AfterViewInit, ViewChild, OnChanges } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { AnasmoGlobals } from 'src/anasmo/global';
+import { faSquareCheck, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { KlarnaService } from './klarna.service';
+
+@Component({
+  selector: 'app-m70-order',
+  templateUrl: './m70-order.component.html',
+  styleUrls: ['./m70-order.component.css']
+})
+export class M70OrderComponent implements OnInit, AfterViewInit {
+  @ViewChild('klarnaContainer', { static: false }) klarnaContainer!: ElementRef;
+
+  isMedium = false;
+  isSmall = false;
+  isBig = false;
+    
+  smallScreenBreakpoints = "(max-width: 549.98px)";
+  mediumScreenBreakpoints = "(min-width: 550px) and (max-width: 749.98px)";
+
+  faSquareCheck = faSquareCheck;
+  faCheck = faCheck;
+
+  klarnaHtml: SafeHtml | undefined;
+
+  constructor(
+    private responsive: BreakpointObserver,
+    private klarnaService: KlarnaService,
+    //private sanitizer: DomSanitizer
+    private elRef: ElementRef,
+    private renderer: Renderer2
+  ) {}
+
+  onQuantityChanged(quantity: number) {
+    
+    //console.log("HEEEEEEEEEEEEEEE: " + quantity); //AnasmoGlobals.CURRENT_PRICE);
+
+    /*if (quantity == 3) {
+      AnasmoGlobals.CURRENT_PRICE = 150000;
+    }
+    else if (quantity == 2) {
+      AnasmoGlobals.CURRENT_PRICE = 125000;
+    }
+    else {
+      AnasmoGlobals.CURRENT_PRICE = 75000;
+    }
+
+    console.log(AnasmoGlobals.CURRENT_PRICE);*/
+
+    this.updateKlarnaCheckout();
+  }
+
+  ngOnInit() {    
+
+    // https://material.angular.io/cdk/layout/overview
+    this.responsive.observe(      
+      this.smallScreenBreakpoints + ", " + this.mediumScreenBreakpoints
+      ).subscribe(result => {
+
+        if (this.responsive.isMatched(this.mediumScreenBreakpoints)) {
+          console.log("MEDIUM");   
+          this.isMedium = true;
+          this.isSmall = false;
+          this.isBig = false;
+        } else if (this.responsive.isMatched(this.smallScreenBreakpoints)) {
+          console.log("SMALL");
+          this.isSmall = true;
+          this.isMedium = false;
+          this.isBig = false;         
+        } else {
+          console.log("BIG");
+          this.isMedium = false;
+          this.isSmall = false;
+          this.isBig = true;
+        }
+
+    });
+  }
+
+  ngAfterViewInit() {
+
+    this.updateKlarnaCheckout();
+
+  }
+
+  /*updateKlarnaCheckout() {
+    if (this.klarnaContainer) {
+        this.klarnaService.createOrder().subscribe(response => {
+            console.log('html_snippet:', response.html_snippet);
+            this.klarnaContainer.nativeElement.innerHTML = response.html_snippet;
+
+            const bootstrapSrc = 'https://js.playground.kustom.co/kcoc/250321-237eff2/checkout.bootstrap.js';
+            const script = this.renderer.createElement('script');
+            this.renderer.setAttribute(script, 'src', bootstrapSrc);
+            this.renderer.setAttribute(script, 'type', 'text/javascript');
+            this.renderer.appendChild(this.klarnaContainer.nativeElement, script);
+
+            console.log('Klarna Checkout initialized with bootstrap script');
+        });
+    } else {
+        console.error('Klarna container not found');
+    }
+}*/
+
+   // Oppdaterer Klarna Checkout
+   updateKlarnaCheckout() {
+    if (this.klarnaContainer) {
+      this.klarnaService.createOrder().subscribe(response => {
+          this.klarnaContainer.nativeElement.innerHTML = response.html_snippet;
+
+          const scriptElement = this.klarnaContainer.nativeElement.querySelector('#klarna-checkout-context');
+          if (scriptElement) {
+              const scriptContent = scriptElement.innerHTML;
+              const newScript = this.renderer.createElement('script');
+              this.renderer.setAttribute(newScript, 'type', 'text/javascript');
+              this.renderer.appendChild(newScript, this.renderer.createText(scriptContent));
+              this.renderer.appendChild(this.klarnaContainer.nativeElement, newScript);
+          }
+      });
+    } else {
+        console.error('Klarna container not found');
+    }
+  }
+}

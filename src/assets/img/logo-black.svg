@@ -1,36 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 3000 683.7" style="enable-background:new 0 0 3000 683.7;" xml:space="preserve">
-<g>
-	<g>
-		<path d="M332,420l146.2-70.4l164.8,242.1V320.3c0-165.1-133.8-299-299-299H189.6L332,420z"/>
-		<path d="M453.9,475.4l-172.4,98.1L21.1,83.8v260.4c0,165.1,133.8,299,299,299h306.2L453.9,475.4z"/>
-	</g>
-	<g>
-		<rect x="799.2" y="70.4" width="118.7" height="567.1"/>
-		<rect x="2564.4" y="70.4" width="118.7" height="567.1"/>
-		<path d="M2949.5,545.7l-8.6,1.8c-8.1,1.7-15.5,2.5-22.1,2.5c-15,0-25.8-4.3-32.9-13.1c-7.5-9.4-11.4-24.3-11.4-44.3V311.5h85
-			v-81.6h-85v-124h-118.7v124h-46v81.6h46v190.4c0,39.2,12.4,73.6,36.9,102.4c24.9,29.2,59.3,44.1,102.2,44.1
-			c25.3,0,50.5-4.8,75-14.3l9-3.5L2949.5,545.7z"/>
-		<path d="M1327.5,246.5c-38.9-19-82-28.7-128-28.7c-46,0-89.3,9.6-128.5,28.5c-39.5,19-71.1,45.3-94.1,78.1
-			c-23.3,33.2-34.5,70-33.4,109.1c1.6,60.4,26.8,111.9,74.8,153.2c47.7,40.9,108.6,61.7,181.2,61.7c28,0,56.2-4.7,83.7-14
-			c10.2-3.4,19.9-7.3,28.9-11.6l5.7-2.7V495.5l-16.6,14.4c-0.9,0.8-1.8,1.5-2.7,2.3c-27.3,22.5-60.6,34-99.1,34
-			c-38,0-70.6-11.3-97.1-33.5c-26.4-22.2-39.7-48.2-40.7-79.5c-0.7-30.9,12-56.7,38.9-79c27.1-22.5,60.4-34,98.9-34
-			c38.2,0,71,11.3,97.5,33.7c26.4,22.3,39.6,48.4,40.3,79.8c0.1,2,0.1,4,0,6l0,0.1v197.7H1456V433.3c0-39.1-11.8-75.7-35-108.9
-			C1398,291.6,1366.6,265.3,1327.5,246.5z"/>
-		<path d="M2409.5,246.5c-38.9-19-82-28.7-128-28.7c-46,0-89.3,9.6-128.5,28.5c-39.5,19-71.1,45.3-94.1,78.1
-			c-23.3,33.2-34.5,70-33.4,109.1c1.6,60.4,26.8,111.9,74.8,153.2c47.7,40.9,108.6,61.7,181.2,61.7c28,0,56.2-4.7,83.7-14
-			c10.2-3.4,19.9-7.3,28.9-11.6l5.7-2.7V495.5l-16.6,14.4c-0.9,0.8-1.8,1.5-2.7,2.3c-27.3,22.5-60.6,34-99.1,34
-			c-38,0-70.6-11.3-97.1-33.5c-26.4-22.2-39.7-48.2-40.7-79.5c-0.7-30.9,12-56.7,38.9-79c27.1-22.5,60.4-34,98.9-34
-			c38.2,0,71,11.3,97.5,33.7c26.4,22.3,39.6,48.4,40.3,79.8c0.1,2,0.1,4,0,6l0,0.1v197.7h118.7V433.3c0-39.1-11.8-75.7-35-108.9
-			C2480,291.6,2448.5,265.3,2409.5,246.5z"/>
-		<path d="M1878.5,256.7l-0.4-0.3l0,171.9c0,1.7,0,3.3,0,4.7c-1,31.4-14.3,57.4-40.7,79.6c-26.5,22.2-59.1,33.5-97.1,33.5
-			c-38.5,0-71.8-11.4-99.1-34c-27-22.3-39.6-48-38.7-78.6c0.7-31.3,13.9-57.4,40.3-79.7c26.5-22.4,59.3-33.7,97.5-33.7
-			c38.5,0,71.8,11.4,98.9,34c1,0.8,1.9,1.6,2.9,2.5l16.6,14.5V246.6l-5.7-2.7c-9-4.3-18.6-8.2-28.7-11.7c-27.7-9.5-56-14.4-84-14.4
-			c-72.8,0-133.9,20.8-181.6,61.7c-48,41.3-73.2,92.9-74.8,153.6c-0.8,38.9,10.5,75.5,33.6,108.8c22.9,33,54.6,59.3,94.2,78.2
-			c39.4,18.8,82.7,28.3,128.7,28.3c46,0,89.1-9.5,128-28.3c39.1-18.9,70.5-45.2,93.4-78.2c23-33.3,34.7-69.8,34.7-108.6
-			c0-170.6,0.1-289.3,0.2-352.9l0-10h-118.1V256.7z"/>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="700"
+   height="150"
+   viewBox="0 0 185.20831 39.687495"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="logo-black.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1">
+    <rect
+       x="183.57143"
+       y="18.571428"
+       width="290.71429"
+       height="116.42857"
+       id="rect16" />
+    <linearGradient
+       id="swatch10">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop10" />
+    </linearGradient>
+    <linearGradient
+       id="swatch9"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="0"
+         id="stop9" />
+    </linearGradient>
+    <rect
+       x="86.428574"
+       y="110"
+       width="385"
+       height="243.57143"
+       id="rect1" />
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath5">
+      <g
+         inkscape:label="Clip"
+         id="use5">
+        <ellipse
+           style="fill:#000000;fill-opacity:0;fill-rule:evenodd;stroke-width:1.48775;stroke-linejoin:round"
+           id="ellipse5"
+           cx="8.3154764"
+           cy="10.016369"
+           rx="3.3072915"
+           ry="3.8742559" />
+      </g>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.3"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="343.21429"
+     inkscape:cy="7.5"
+     inkscape:document-units="px"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:window-width="1920"
+     inkscape:window-height="1129"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path2"
+     style="opacity:1;fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:4.09416;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 4.2576212,20.788912 A 17.197916,16.252975 0 0 0 21.355802,35.718749 17.197916,16.252975 0 0 0 38.453466,20.788912 Z" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:1.74942;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2-5"
+     cx="26.990829"
+     cy="10.189787"
+     rx="2.1630108"
+     ry="2.2575047" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:1.74942;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2-5-7"
+     cx="17.663568"
+     cy="5.2848496"
+     rx="2.1630108"
+     ry="2.2575047" />
+  <ellipse
+     style="fill:#ffffff;fill-opacity:0;fill-rule:evenodd;stroke:#000000;stroke-width:1.74942;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="path2-5-1"
+     cx="18.816401"
+     cy="13.581434"
+     rx="2.1630108"
+     ry="2.2575047" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:23.0719px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.62413;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     x="39.702435"
+     y="19.852789"
+     id="text16"
+     transform="scale(1.0776753,0.92792328)"><tspan
+       sodipodi:role="line"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:23.0719px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.62413;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="39.702435"
+       y="19.852789"
+       id="tspan17">DESCALER</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:25.4988px;font-family:Arial;-inkscape-font-specification:'Arial, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.707721;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     x="33.19883"
+     y="45.294617"
+     id="text16-6"
+     transform="scale(1.258126,0.79483294)"><tspan
+       sodipodi:role="line"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;font-size:25.4988px;font-family:Arial;-inkscape-font-specification:'Arial, Condensed';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.707721;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="33.19883"
+       y="45.294617"
+       id="tspan17-6">DELIGHT</tspan></text>
 </svg>

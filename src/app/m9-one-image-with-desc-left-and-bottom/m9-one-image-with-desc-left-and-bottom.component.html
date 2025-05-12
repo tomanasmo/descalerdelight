@@ -1,0 +1,50 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>
+
+      <div class="item2">
+
+        <h1><strong>Bevare</strong> den beste kaffesmaken</h1>
+
+        <p>Mineraler og kalk som bygger seg opp i maskinen kan påvirke smaken på kaffen negativt.</p>
+        <p>Dette skjer fordi vannet ikke renner optimalt gjennom maskinen eller fordi gamle avleiringer blander seg med kaffen.</p>
+        <p>Regelmessig avkalking sikrer at hver kopp smaker så godt som den skal – ren og frisk!</p>
+
+        <div class="button-container">
+          <a class="order-now2" href="/bevare-den-beste-kaffesmaken">Mer</a>
+          <a class="order-now3" href="/analyse">Få rapport</a>
+          </div>
+      
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <div *ngIf="isMedium || isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image2"></ng-container>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image>
+  <!--<img src="./assets/img/p2.png" />-->
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <img src="./assets/image.png" />
+</ng-template>
+
+<ng-template #image2>
+  <!--<img src="./assets/img/p2.png" />-->
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <!--<img src="./assets/img/m5-four-persons-happy-with-full-battery-ladalt-top.png" />-->
+  <img src="./assets/image.png" />
+</ng-template>

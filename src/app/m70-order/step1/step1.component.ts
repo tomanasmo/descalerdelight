@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AnasmoGlobals } from 'src/anasmo/global';
 import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,15 @@ import { faSquareCheck } from '@fortawesome/free-solid-svg-icons';
 })
 export class Step1Component implements OnInit {
 
-  @Input() selectedQuantity: number = 4;
+  @Output() quantityChanged = new EventEmitter<number>();
+
+  // Kalles når brukeren endrer antall
+  /*onQuantityChange() {
+    this.quantityChanged.emit(this.selectedQuantity); // Send signal til forelder
+    console.log("HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALLLOOOOOOOOOOOOOO");
+  }*/
+
+  @Input() selectedQuantity: number = 1;
   @Input() language: string = "NO";
   text: any;
   textNo = [ "Steg 1: Velg antall", "MEST POPULÆR" ];
@@ -47,13 +55,16 @@ export class Step1Component implements OnInit {
     }
 
     // Set default selection.    
-    this.selected =  document.getElementById("box4x");
+    this.selected =  document.getElementById("box1x");
     if (this.selectedQuantity == 3) {    
       this.selected = document.getElementById("box3x");
+      //AnasmoGlobals.CURRENT_PRICE = 1500;
     } else if (this.selectedQuantity == 2) {
       this.selected = document.getElementById("box2x");
+      //AnasmoGlobals.CURRENT_PRICE = 1250;
     } else if (this.selectedQuantity == 1) {
       this.selected = document.getElementById("box1x");
+      //AnasmoGlobals.CURRENT_PRICE = 750;
     }
 
     if (this.selected != null) {
@@ -97,29 +108,50 @@ export class Step1Component implements OnInit {
     }
 
     // Unselect.
-    const box4x = document.getElementById("box4x");
+    //const box4x = document.getElementById("box4x");
     const box3x = document.getElementById("box3x");
     const box2x = document.getElementById("box2x");
     const box1x = document.getElementById("box1x");
-    if (box4x != current && box4x != null) {
+    /*if (box4x != current && box4x != null) {
       if (box4x != null) {
         box4x.style.border = this.standardBorder;
+        this.selectedQuantity = 3;
+        AnasmoGlobals.CURRENT_PRICE = 150000;
       }
-    }
+    }*/
     if (box3x != current && box3x != null) {
       if (box3x != null) {
         box3x.style.border = this.standardBorder;
+        this.selectedQuantity = 3;
       }
     }
     if (box2x != current && box2x != null) {
       if (box2x != null) {
         box2x.style.border = this.standardBorder;
+        this.selectedQuantity = 2;
       }
     }
     if (box1x != current && box1x != null) {
       if (box1x != null) {
         box1x.style.border = this.standardBorder;
+        this.selectedQuantity = 1;
       }
     }
+
+    switch (current) {
+
+      case box3x:
+        AnasmoGlobals.CURRENT_PRICE = 150000;
+        break;
+      case box2x:
+        AnasmoGlobals.CURRENT_PRICE = 125000;
+        break;
+      case box1x:
+        AnasmoGlobals.CURRENT_PRICE = 75000;
+        break;  
+    }
+
+    this.quantityChanged.emit(this.selectedQuantity); // Send signal til forelder
+    //console.log("HEEEEEEEEEEEEEEE: " + this.selectedQuantity);
   }
 }

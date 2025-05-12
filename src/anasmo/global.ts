@@ -23,4 +23,6 @@ export class AnasmoGlobals {
   public static STRIPE_LINK = this.STRIPE_LINK_TEST; //"test_9AQ9E2dGW8Nc2FG5kE";
   public static CALL_TO_ACTION_BUTTON_TEXT = "";
   public static BUTTON_DISCOUNT_PERCENT = this.DISCOUNT_PERCENT_TEST;
+  public static CURRENT_PRICE = 75000;
+  //public static IS_CURRENT_PRICE_CHANGED = false;
 }

@@ -3,8 +3,8 @@
 .outer-grid {
   /*background: url(/assets/img/mockup/m2-1.png) no-repeat center center;*/
   /*background: url(/assets/img/shutterstock/ss1.jpg) no-repeat center center;*/
-  background: url(/assets/img/m2-top-banner-background1.png) no-repeat center center;
-  background-color: rgb(195, 195, 195);
+  /*background: url(/assets/img/m2-top-banner-background1.png) no-repeat center center;*/
+  background-color: rgb(245,245,247);
   background-size: cover;
   display: grid;
   grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
@@ -14,9 +14,9 @@
 
 .outer-grid.is-medium, .outer-grid.is-small {
   /*background: none;*/ /*url(/assets/img/Picture48.png) no-repeat center center;*/
-  background: url(/assets/img/m2-top-banner-background2.png) no-repeat center center;
+  /*background: url(/assets/img/m2-top-banner-background2.png) no-repeat center center;*/
   background-size: cover;
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(245,245,247);
 }
 
 /* Wrapper. */
@@ -68,7 +68,7 @@
 }
 
 .prosent {
-  font-size: 8em;
+  font-size: 3em;
   /* Remove space between rabatt and percent. */
   line-height: 0.8;
   font-weight: bolder;

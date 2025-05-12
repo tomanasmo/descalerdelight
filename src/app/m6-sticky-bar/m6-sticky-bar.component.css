@@ -76,7 +76,7 @@ mat-icon {
 .wrapper {
   padding: 1em 2em;
   /*background-color: black;*/
-  background-color: black;
+  background-color: var(--background-color);
   color: white;
 }
 

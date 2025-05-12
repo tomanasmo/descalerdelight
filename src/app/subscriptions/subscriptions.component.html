@@ -1,0 +1,132 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <h1>Planer og priser</h1>
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <div class="item1">
+        <!--<ng-container *ngTemplateOutlet="image1"></ng-container>-->        
+        <h2 class="plan-title">1825 kopper</h2>          
+        <p><strong>Anbefalt mengde</strong> avkalking og rengjøring for 5 kopper pr dag</p>
+        <p>Tilsvarer <strong>1 norsk</strong> persons gjennomsnittlige årsforbruk av kaffe</p>
+        <p>5 Descaler Delight avkalkingstabletter</p>
+        <p>25 Cleaner Charm rengjøringstabletter</p>
+        <p>Påminnelser om vedlikehold</p>
+        <p>Årlig forsendelse med alt du trenger</p>
+        <p>Si opp når som helst</p>
+        <p class="price">750 kr<span>/år</span></p>          
+        <a href="/analyse" class="button">KOMMER SNART</a>
+      </div>
+
+      <div class="item2">        
+        <!--<ng-container *ngTemplateOutlet="image2"></ng-container>-->
+        <h2 class="plan-title">3650 kopper</h2>        
+        <p><strong>Anbefalt mengde</strong> avkalking og rengjøring for 10 kopper pr dag</p>
+        <p>Tilsvarer <strong>2 norske</strong> personers gjennomsnittlige årsforbruk av kaffe</p>
+        <p>10 Descaler Delight avkalkingstabletter</p>
+        <p>50 Cleaner Charm rengjøringstabletter</p>
+        <p>Påminnelser om vedlikehold</p>
+        <p>Årlig forsendelse med alt du trenger</p>
+        <p>Si opp når som helst</p>
+        <p class="price">1250 kr<span>/år</span></p>        
+        <a href="/analyse" class="button">KOMMER SNART</a>      
+      </div>
+
+      <div class="item3">        
+        <!--<ng-container *ngTemplateOutlet="image3"></ng-container>-->
+        <h2 class="plan-title">5475 kopper</h2>        
+        <p><strong>Anbefalt mengde</strong> avkalking og rengjøring for 15 kopper pr dag</p>
+        <p>Tilsvarer <strong>3 norske</strong> personers gjennomsnittlige årsforbruk av kaffe</p>
+        <p>15 Descaler Delight avkalkingstabletter</p>
+        <p>75 Cleaner Charm rengjøringstabletter</p>
+        <p>Påminnelser om vedlikehold</p>
+        <p>Årlig forsendelse med alt du trenger</p>
+        <p>Si opp når som helst</p>
+        <p class="price">1500 kr<span>/år</span></p>        
+        <a href="/analyse" class="button">KOMMER SNART</a>
+      </div>
+    
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+      <!--<label>Kundenavn:</label>
+      <input type="text" [(ngModel)]="invoice.customer_name" name="customer_name" required>-->
+      
+      <!--<label>E-post:</label>
+      <input type="email" [(ngModel)]="invoice.customer_email" name="customer_email" required>-->
+
+      <label>User:</label>
+      <input type="number" [(ngModel)]="invoice.user" name="user" required>
+      
+      <label>Beløp:</label>
+      <input type="number" [(ngModel)]="invoice.amount" name="amount" required>
+      
+      <!--<label>Forfallsdato:</label>
+      <input type="date" [(ngModel)]="invoice.due_date" name="due_date" required>-->
+      
+      <button type="submit">Send Faktura</button>
+    </form>
+
+    <!--<div class="container">      
+
+      <div class="plan">
+        <h2 class="plan-title">1825 kopper kaffe</h2>        
+        <div class="price">750kr <span>/ år</span></div>
+        <ul class="features">
+          <p>Anbefalt mengde avkalking og rengjøring (5 kopper pr dag) tilsvarende 1 persons gjennomsnittpge årsforbruk av kaffe</p>
+            <p>5 Descaler Depght avkalkingstabletter</p>
+            <p>25 Cleaner Charm rengjøringstabletter</p>
+            <p>Påminnelser om vedpkehold</p>
+            <p>Årpg forsendelse med alt du trenger</p>
+        </ul>        
+        <a href="#" class="button">KOMMER SNART</a>
+    </div>
+
+    <div class="plan">
+        <h2 class="plan-title">3650 kopper kaffe</h2>
+        <div class="price">1000kr <span>/ år</span></div>
+        <ul class="features">
+          <p>2 personers gjennomsnittpg årsforbruk (10 kopper pr dag)</p>
+          <p>10 Descaler Depght avkalkingstabletter</p>
+          <p>50 Cleaner Charm rengjøringstabletter</p>
+          <p>Påminnelser om vedpkehold</p>
+          <p>Årpg forsendelse med alt du trenger</p>
+        </ul>
+        <a href="#" class="button">KOMMER SNART</a>
+    </div>
+
+    <div class="plan">
+      <h2 class="plan-title">5475 kopper kaffe</h2>
+      <div class="price">1250kr <span>/ år</span></div>
+      <ul class="features">
+        <p>3 personers gjennomsnittpg årsforbruk (15 kopper pr dag)</p>
+        <p>15 Descaler Depght avkalkingstabletter</p>
+        <p>75 Cleaner Charm rengjøringstabletter</p>
+        <p>Påminnelser om vedpkehold</p>
+        <p>Årpg forsendelse med alt du trenger</p>
+      </ul>
+      <a href="#" class="button">KOMMER SNART</a>
+  </div>
+
+     
+  </div>-->
+
+</div>
+
+<!-- Images. -->
+<ng-template #image1>
+  <!--<img src="./assets/img/mockup/m4-1.png" />-->
+  <img src="./assets/img/ladalt-man-looking-under-couch-for-charger.jpg" />
+</ng-template>
+
+<ng-template #image2>
+  <!--<img src="./assets/img/mockup/m4-2.png" />-->
+  <img src="./assets/img/ladalt-woman-with-phone-empty-battery-cannot-find-charger.jpg" />
+</ng-template>
+
+<ng-template #image3>
+  <!--<img src="./assets/img/mockup/m4-3.png" />-->
+  <img src="./assets/img/ladalt-frustrated-and-stressed-woman-cannot-find-phone-charger-and-kids-running-in-background.jpg" />
+</ng-template>

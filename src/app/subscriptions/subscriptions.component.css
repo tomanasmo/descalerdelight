@@ -1,0 +1,99 @@
+.wrapper {
+  padding: 1em 2em 3em;
+  background-color: white;
+  /*background-color: rgb(195, 195, 195);*/
+  color: black;
+}
+
+.outer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  justify-content: center;    
+  /*background-color: rgb(195, 195, 195);
+  background-color: black;
+  color: white;*/
+}
+
+a {
+  color: black;
+}
+
+.plan-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/*.price {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}*/
+
+.price {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.price span {
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: var(--background-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: center;
+  align-items: start;
+  /*padding: 1em 0;*/
+  gap: 10px;  
+}
+
+.grid.is-medium, .grid.is-small {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: 1fr;
+  /*padding: 0 15%;  */
+  gap: 0;
+}
+
+/* General. */
+
+.item1, .item2, .item3 {
+  display: grid;
+  grid-template-rows: auto;
+  /*gap: 5px;*/
+  font-size: 0.9em;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px;
+  text-align: left;
+  border: black solid 5px;
+}
+
+.item1 a, .item2 a, .item3 a {
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  /*background: url(src/assets/img/i1.bmp) no-repeat center center;
+  background-size: contain;*/
+}
+
+p {
+  margin: 10px 0;
+}

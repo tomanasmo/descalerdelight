@@ -4,7 +4,7 @@ import { M70OrderComponent } from './m70-order.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Step1Component } from './step1/step1.component';
 import { Step0Component } from './step0/step0.component';
-
+import { FormsModule } from '@angular/forms'; // Importer FormsModule
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { Step0Component } from './step0/step0.component';
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
   ],
   exports: [
     M70OrderComponent

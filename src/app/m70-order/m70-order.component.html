@@ -1,50 +1,120 @@
-<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}"> 
+<div class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall, 'is-big': isBig}">
   <div class="outer-grid">
     <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
       <div class="item1">
-        <app-step0></app-step0>
-        <br/>
-        <div><hr/></div>
         <app-step1></app-step1>
       </div>
       <div class="item2">
-        <p>Smartchip</p>
-        <p>Nok lading til alle</p>
-        <p>Miljøvennlig</p>
-        <br/>
-        <div><hr/></div>
+        <p><fa-icon [icon]="faCheck" style="color: green;"></fa-icon> Påminnelser om vedlikehold</p>
+        <p><fa-icon [icon]="faCheck" style="color: green;"></fa-icon> Årlig forsendelse med alt du trenger</p>
+        <p><fa-icon [icon]="faCheck" style="color: green;"></fa-icon> Si opp når som helst</p>
+        <br />
+        <hr />
 
-        <p>DU VIL BLABLABLA</p>
+        <h5 class="step">
+          <fa-icon [icon]="faSquareCheck"></fa-icon> Steg 2: Betaling med Revolut Pay
+        </h5>
 
-        
+        <div class="payment-container">
+          <form>
+            <!-- Steg 1 -->
+            <div *ngIf="step === 1">
+              <div class="form-table">
+                <div class="form-group">
+                  <label for="email">E-postadresse</label>
+                  <input id="email" type="email" [(ngModel)]="customerEmail" name="email" class="form-control" placeholder="Skriv inn e-postadresse" required #email="ngModel" />
+                  <div *ngIf="email.invalid && email.touched" class="error">Vennligst skriv inn en gyldig e-postadresse.</div>
+                </div>
+                <div class="form-group">
+                  <label for="zipCode">Postnummer</label>
+                  <input id="zipCode" type="text" [(ngModel)]="zipCode" name="zipCode" class="form-control" placeholder="Skriv inn postnummer" required #zipCodeInput="ngModel" />
+                  <div *ngIf="zipCodeInput.invalid && zipCodeInput.touched" class="error">Vennligst skriv inn et gyldig postnummer (minst 4 sifre).</div>
+                </div>
+              </div>
+              <br/>
+              <div>
+                <button class="btn btn-primary" (click)="proceedToNextStep()" [disabled]="!isStep1Valid()">Fortsett</button>
+              </div>
+              <br/>
+            </div>
 
-        <div><hr/></div>
+            <!-- Steg 2 -->
+            <div *ngIf="step === 2">
+              <div class="form-table">
+                <div class="form-group">
+                  <label for="firstName">Fornavn</label>
+                  <input id="firstName" type="text" [(ngModel)]="firstName" name="firstName" class="form-control" placeholder="Skriv inn fornavn" required #firstNameInput="ngModel" />
+                  <div *ngIf="firstNameInput.invalid && firstNameInput.touched" class="error">Vennligst skriv inn fornavn.</div>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Etternavn</label>
+                  <input id="lastName" type="text" [(ngModel)]="lastName" name="lastName" class="form-control" placeholder="Skriv inn etternavn" required #lastNameInput="ngModel" />
+                  <div *ngIf="lastNameInput.invalid && lastNameInput.touched" class="error">Vennligst skriv inn etternavn.</div>
+                </div>
+                <div class="form-group">
+                  <label for="address">Adresse</label>
+                  <input id="address" type="text" [(ngModel)]="address" name="address" class="form-control" placeholder="Skriv inn adresse" required #addressInput="ngModel" />
+                  <div *ngIf="addressInput.invalid && addressInput.touched" class="error">Vennligst skriv inn adresse.</div>
+                </div>
+                <div class="form-group">
+                  <label for="city">By/Sted</label>
+                  <input id="city" type="text" [(ngModel)]="city" name="city" class="form-control" placeholder="Skriv inn by/sted" required #cityInput="ngModel" />
+                  <div *ngIf="cityInput.invalid && cityInput.touched" class="error">Vennligst skriv inn by/sted.</div>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Telefonnummer</label>
+                  <input id="phoneNumber" type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" placeholder="Skriv inn telefonnummer" required #phoneNumberInput="ngModel" />
+                  <div *ngIf="phoneNumberInput.invalid && phoneNumberInput.touched" class="error">Vennligst skriv inn et gyldig telefonnummer (minst 8 sifre).</div>
+                </div>                
+              </div>
+              <br/>
+              <div>
+                <button class="btn btn-primary" (click)="proceedToNextStep()" [disabled]="!isStep2Valid()">Fortsett</button>
+              </div>
+            </div>
 
-        <div style="padding: 1em 0; display: grid; grid-template-columns: auto auto; gap: 5px; font-size: 0.7em; font-weight: 800;">
-          
-          <div>
-            <input type="checkbox" id="1" name="1" value="1">
-          </div>
-          <div>
-            <label for="1"> Jeg godtar å motta markedsføringsinfo om produktene deres.</label>
-          </div>
+            <!-- Steg 3 -->
+            <div *ngIf="step === 3 && publicId">
+              <div class="user-details">
+                <h6>Dine opplysninger</h6>
+                <p class="name">{{ firstName }} {{ lastName }}</p>
+                <p class="secondary">{{ address }}, {{ zipCode }} {{ city }}</p>
+                <p class="secondary">{{ customerEmail }}, {{ phoneNumber }}</p>
+              </div>
+              <div class="form-table">
+                <div class="form-group">
+                  <label for="cardholderName">Kortinnehavernavn</label>
+                  <input id="cardholderName" type="text" [(ngModel)]="cardholderName" name="cardholderName" class="form-control" placeholder="Skriv inn fornavn og etternavn" required #cardholderNameInput="ngModel" />
+                  <div *ngIf="cardErrorMessage && cardErrorMessage.includes('kortinnehavernavn')" class="error">{{ cardErrorMessage }}</div>
+                </div>
+                <div class="form-group">
+                  <label for="cardField">Kortinformasjon</label>
+                  <div #cardField id="cardField" class="card-field"></div>
+                  <div *ngIf="cardErrorMessage && !cardErrorMessage.includes('kortinnehavernavn')" class="error">{{ cardErrorMessage }}</div>
+                </div>
+              </div>
+            </div>
 
-          <div>
-            <input type="checkbox" id="2" name="2" value="2">
-          </div>
-          <div>
-            <label for="2"> Jeg godtar å motta en tekstmelding om bestillingsstatusen min, andre ordrebeslektede nyheter og markedsføringsinfo.</label>
-          </div>
-
-          <div>
-            <input type="checkbox" id="3" name="3" value="3">
-          </div>
-          <div>
-            <label for="3"> Jeg bekrefter at jeg har lest og godtatt Brukervilkår og Retningslinjer for personvern.</label>
-          </div>
-
+            <hr />
+            <div class="order-summary">
+              <p>Ordrebeløp inkl. angitt MVA <span>{{ formatPrice(getPriceInNOK()) }} kr</span></p>
+              <div *ngIf="showOrderDetails" class="order-details">Inkl. MVA & frakt</div>
+            </div>
+            <button class="btn btn-success" (click)="submitCard?.()" [disabled]="!isFormValid()">Betal ordren</button>
+            
+            <p class="terms-text">
+              Ved å trykke "Betal ordren" aksepterer jeg vilkårene til 
+              <a href="https://www.revolut.com/nb-NO/legal/pay-with-revolut-checkout/" target="_blank" rel="noopener">Revolut</a> og 
+              <a href="https://descalerdelight.com/brukervilkår" target="_blank" rel="noopener">descalerdelight.com</a> og bekrefter at jeg har lest personvernerklæringene til 
+              <a href="https://www.revolut.com/en-NO/legal/privacy/" target="_blank" rel="noopener">Revolut</a> og 
+              <a href="https://descalerdelight.com/personvern" target="_blank" rel="noopener">descalerdelight.com</a>.
+            </p>
+            
+            <a href="https://www.revolut.com/nb-NO/legal/pay-with-revolut-checkout/" target="_blank" rel="noopener">
+              <img class="revolut-logo" src="/assets/img/RevolutPay-Online-Assets/RevolutPay-Online-Assets/Revolut Pay - Button and logo assets/Button/Button/Black/Small.svg" alt="Revolut Logo">
+            </a>
+          </form>
         </div>
-
       </div>
     </div>
   </div>

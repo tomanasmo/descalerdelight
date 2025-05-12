@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: black;
+  background-color: var(--background-color);
   color: white;
   padding: 1em 2em;
 }

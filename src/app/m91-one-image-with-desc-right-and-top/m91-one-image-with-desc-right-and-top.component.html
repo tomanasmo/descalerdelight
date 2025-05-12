@@ -1,0 +1,67 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div *ngIf="isMedium || isSmall" class="test">
+      <ng-container *ngTemplateOutlet="headline"></ng-container>
+      <ng-container *ngTemplateOutlet="image2"></ng-container>
+    </div>
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <!--<div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>-->
+
+      <div class="item2">
+
+        <div *ngIf="isBig"><ng-container *ngTemplateOutlet="headline"></ng-container></div>
+        
+        <!--<div *ngIf="isMedium || isSmall">
+          <ng-container *ngTemplateOutlet="image"></ng-container>
+        </div>-->
+
+        <p>En kaffemaskin med kalkavleiringer må bruke mer energi for å varme opp vannet.</p>
+        <p>Dette skyldes at kalk isolerer varmeelementene og reduserer deres effektivitet.</p>
+        <p>Ved å avkalke holder du maskinen i topp stand, noe som kan spare deg for strøm og redusere miljøbelastningen over tid.</p>        
+        
+         <div class="button-container">
+           <a class="order-now2" href="/oke-effektiviteten-og-spare-energi">Mer</a>        
+           <a class="order-now3" href="/analyse">Få rapport</a>
+         </div>
+
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <!--<div *ngIf="isMedium || isSmall" class="item1">-->
+      <div *ngIf="isBig" class="item1">
+        <ng-container *ngTemplateOutlet="image1"></ng-container>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image1>
+  <!--<img src="./assets/img/p3-1-logo.png" />-->
+  <!--<img src="./assets/img/mockup/m7-1.png" />-->  
+  <!--<img src="./assets/img/shutterstock/ss2.jpg" />
+  <img src="./assets/img/shutterstock/ss10.jpg" />-->
+  <img src="./assets/image.png" />
+</ng-template>
+
+<ng-template #image2>
+  <!--<img src="./assets/img/p3-2-logo.png" />-->
+  <!--<img src="./assets/img/mockup/m7-1.png" />-->
+  <!--<img src="./assets/img/shutterstock/ss2.jpg" />
+  <img src="./assets/img/shutterstock/ss10.jpg" />-->
+  <img src="./assets/image.png" />
+</ng-template>
+
+<ng-template #headline>
+  <h1>Øke effektiviteten og <strong>spare energi</strong></h1>
+</ng-template>

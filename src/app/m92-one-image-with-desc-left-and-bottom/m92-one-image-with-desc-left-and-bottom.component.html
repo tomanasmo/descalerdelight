@@ -1,0 +1,50 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
+
+      <!-- Show this only if not big screen. -->
+      <div *ngIf="!isMedium && !isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image"></ng-container>
+      </div>
+
+      <div class="item2">
+
+        <h1><strong>Unngå bakterier</strong> og hygieniske problemer</h1>
+
+        <p>Kalk og mineraler skaper et miljø der bakterier og mugg kan trives, spesielt i fuktige deler av maskinen.</p>
+        <p>Selv om vannet er bløtt, kan små avleiringer over tid bli grobunn for urenheter.</p>
+        <p>Avkalking fjerner dette og holder kaffemaskinen hygienisk, så du kan nyte kaffen uten bekymringer.</p>
+        
+        <div class="button-container">
+          <a class="order-now2" href="/unnga-bakterier-og-hygieniske-problemer">Mer</a>
+          <a class="order-now3" href="/analyse">Få rapport</a>
+        </div>
+
+      </div>      
+
+      <!-- Show this only if big screen. -->
+      <div *ngIf="isMedium || isSmall" class="item1">
+        <ng-container *ngTemplateOutlet="image2"></ng-container>
+      </div>
+    
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Image. -->
+<ng-template #image>
+  <!--<img src="./assets/img/p2.png" />-->
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <img src="./assets/image.png" />
+</ng-template>
+
+<ng-template #image2>
+  <!--<img src="./assets/img/p2.png" />-->
+  <!--<img src="./assets/img/mockup/m5-1.png" />-->
+  <!--<img src="./assets/img/m5-four-persons-happy-with-full-battery-ladalt-top.png" />-->
+  <img src="./assets/image.png" />
+</ng-template>

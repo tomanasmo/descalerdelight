@@ -1,6 +1,10 @@
+:root {
+  --background-color: #1E120A; /* Mørk brun for knapper */
+}
+
 .wrapper {
   padding: 1em 2em 1em;
-  background-color: lightgray;/*rgb(195, 195, 195);*/
+  background-color: lightgray; /* rgb(195, 195, 195); */
   color: black;  
 }
 
@@ -8,15 +12,15 @@
   padding: 1em 1em 1em;
 }
 
-/* Outer grid */
+.step {
+  font-size: 1em;
+}
 
+/* Outer grid */
 .outer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
+  grid-template-columns: minmax(0, 950px); /* 100% up to max */
   justify-content: center;    
-  /*background-color: rgb(195, 195, 195);
-  background-color: black;
-  color: white;*/  
 }
 
 .item1, .item2 {
@@ -35,4 +39,251 @@
   grid-template-columns: none;
   grid-template-rows: auto;
   gap: 20px;
+}
+
+/* Styling for form-table (tabell-container for form-group) */
+.form-table {
+  border: 1px solid #d3d3d3; /* Ytre lysegrå border */
+  border-radius: 4px; /* Avrundede hjørner på topp og bunn */
+  background-color: #fff; /* Hvit bakgrunn */
+}
+
+/* Legg til luft under form-table i Steg 1 */
+[ngIf="step === 1"] .form-table {
+  margin-bottom: 1em; /* Avstand til Fortsett-knappen */
+}
+
+/* Styling for form-group (tabellrader) */
+.form-group {
+  border-bottom: 1px solid #d3d3d3; /* Horisontal border mellom rader */
+  padding: 0.5em; /* Mindre luft */
+  margin-bottom: 0; /* Ingen vertikal avstand */
+}
+
+/* Legg til luft under form-group for postnummer */
+.form-group:has(#zipCode) {
+  padding-bottom: 1em; /* Økt luft under postnummer */
+}
+
+/* Reduser padding-bottom for form-group med card-field */
+.form-group:has(.card-field) {
+  padding-bottom: 0; /* Fjern luft under kortinformasjonen */
+}
+
+/* Fjern border-bottom på siste form-group */
+.form-group:last-child {
+  border-bottom: none;
+}
+
+/* Styling for label inne i form-group */
+.form-group label {
+  display: block; /* Sørg for at label tar hele bredden */
+  margin-bottom: 0.1em; /* Mindre luft til input */
+  font-size: 0.7em; /* 15% redusert fra 0.8em */
+  color: #333; /* Mørk grå for kontrast */
+}
+
+/* Styling for input-felter */
+.form-control {
+  border: none; /* Fjern standard border */
+  border-radius: 0; /* Fjern Bootstraps border-radius */
+  padding: 0; /* Ingen indre luft */
+  margin: 0; /* Ingen ytre luft */
+  width: 100%; /* Behold full bredde */
+  font-size: 0.75em; /* 15% redusert fra 0.9em */
+  box-sizing: border-box; /* Sørg for at dimensjoner inkluderes i bredden */
+  transition: none; /* Ingen overgang */
+}
+
+/* Fokus-stil for input */
+.form-control:focus {
+  outline: none; /* Fjern standard outline */
+}
+
+/* Feilmeldinger */
+.error {
+  color: red;
+  font-size: 0.7em; /* 15% redusert fra 0.8em */
+  margin-top: 0; /* Fjern luft over feilmelding */
+  margin-left: 0.5em; /* Juster for å matche padding */
+}
+
+/* Styling for Revolut card-field */
+.card-field {
+  width: 100%;
+  height: auto; /* Fjern min-height for å unngå ekstra plass */
+  font-size: 0.75em; /* Match .form-control */
+  box-sizing: border-box;
+}
+
+/* Style Revoluts interne elementer for å tilnærme layout */
+.card-field > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kortnummer på én linje */
+.card-field input[type="text"]:first-child {
+  width: 100%;
+  margin-bottom: 0; /* Fjern luft under kortnummer */
+}
+
+/* MM/ÅÅ og CVC side om side */
+.card-field input[type="text"]:not(:first-child) {
+  width: calc(50% - 0.25em); /* 50% minus halvparten av gap */
+  display: inline-block;
+  margin-bottom: 0; /* Fjern luft under MM/ÅÅ og CVC */
+}
+
+.card-field input[type="text"]:nth-child(2) {
+  margin-right: 0.5em; /* Avstand mellom MM/ÅÅ og CVC */
+}
+
+/* Responsivitet: Stable vertikalt på små skjermer */
+@media (max-width: 549.98px) {
+  .card-field input[type="text"]:not(:first-child) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0; /* Fjern luft på små skjermer */
+  }
+}
+
+/* Styling for oppsummering av opplysninger */
+.user-details {
+  margin-bottom: 1em; /* Avstand til form-table */
+  font-size: 0.7em; /* Liten font, samme som .error og label */
+}
+
+.user-details h6 {
+  margin: 0 0 0.5em 0;
+  font-size: 1em; /* Litt større enn p, men fortsatt liten */
+  color: #000; /* Svart tekst */
+}
+
+.user-details .name {
+  margin: 0 0 0.2em 0;
+  color: #000; /* Svart tekst */
+}
+
+.user-details .secondary {
+  margin: 0 0 0.2em 0;
+  color: #555; /* Grå tekst, samme som .order-details */
+}
+
+/* Styling for Revolut-logo */
+.revolut-logo {
+  width: 100px; /* Doblet fra 50px */
+  height: auto; /* Bevar aspektforhold */
+  margin-top: 0.5em; /* Avstand fra terms-text */
+  margin-bottom: 0.5em; /* Avstand til neste element */
+  margin-left: auto; /* Midtstilling */
+  margin-right: auto; /* Midtstilling */
+  display: block; /* Sørg for at bildet er på egen linje */
+}
+
+/* Responsivitet: Reduser logo-størrelse på små skjermer */
+@media (max-width: 549.98px) {
+  .revolut-logo {
+    width: 80px; /* Doblet fra 40px */
+  }
+}
+
+/* Styling for vilkår-tekst under Betal ordren */
+.terms-text {
+  font-size: 0.65em; /* Veldig liten font */
+  color: #555; /* Grå tekst, samme som .order-details */
+  margin-top: 0.5em; /* Liten avstand fra knappen */
+  margin-bottom: 0; /* Ingen ekstra luft under */
+  text-align: center; /* Midtstille teksten */
+}
+
+/* Styling for lenker i vilkår-tekst */
+.terms-text a {
+  color: #007bff; /* Blå, matcher .order-summary a */
+  text-decoration: underline;
+}
+
+.terms-text a:hover {
+  color: #0056b3; /* Mørkere blå ved hover */
+}
+
+/* Styling for hr for å redusere luft */
+hr {
+  margin: 0.5em 0; /* Reduser margin for å tette gap til .order-summary */
+}
+
+/* Styling for knapper */
+.btn-primary, .btn-success {
+  display: block; /* Ta hele bredden */
+  width: 100%; /* Sikre full bredde */
+  background-color: var(--background-color); /* Mørk brun (#1E120A) */
+  color: #fff; /* Hvit tekst */
+  border: 1px solid var(--background-color); /* Matchende border */
+  border-radius: 4px; /* Runde hjørner */
+  padding: 0.5em 1em; /* Balansert padding */
+  font-size: 0.9em; /* Litt mindre font for konsistens */
+  text-align: center; /* Sentrer tekst */
+  transition: background-color 0.2s ease-in-out; /* Glatt overgang for hover */
+}
+
+/* Legg til luft over Fortsett-knappen */
+[ngIf="step === 1"] .btn-primary {
+  margin-top: 1em; /* Avstand fra form-table */
+}
+
+/* Hover-stil for knapper */
+.btn-primary:hover, .btn-success:hover {
+  background-color: #2A1A0F; /* Litt lysere brun for hover */
+  border-color: #2A1A0F;
+}
+
+/* Disabled-stil for knapper */
+.btn-primary:disabled, .btn-success:disabled {
+  background-color: #6c757d; /* Grå for deaktivert */
+  border-color: #6c757d;
+  color: #fff;
+  opacity: 0.65;
+}
+
+/* Fokus-stil for knapper */
+.btn-primary:focus, .btn-success:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtil skygge for fokus */
+}
+
+/* Behold eksisterende stiler for andre elementer */
+.order-summary {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.order-summary p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary p span {
+  order: 2; /* Flytt prisen til høyre */
+}
+
+.order-summary p a {
+  order: 1; /* Plasser lenken etter teksten, men før prisen */
+}
+
+.order-summary a {
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.order-summary a:hover {
+  color: #0056b3;
+}
+
+.order-details {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
 }

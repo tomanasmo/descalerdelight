@@ -1,16 +1,18 @@
 <div class="grid" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
   
-  <a class="track" [ngClass]="{'is-medium': isMedium}" routerLink="/sporing" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <!--<a class="track" [ngClass]="{'is-medium': isMedium}" routerLink="/sporing" routerLinkActive="active" ariaCurrentWhenActive="page">
     {{ text[0] }}
-  </a>
+  </a>-->
 
-  <a class="contact" [ngClass]="{'is-medium': isMedium}" routerLink="/kontakt" routerLinkActive="active" ariaCurrentWhenActive="page">
-    {{ text[1] }}
-  </a>
+  <a class="contact" [ngClass]="{'is-medium': isMedium}" routerLink="/kontakt" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[1] }}</a>
+
+  <a class="contact" [ngClass]="{'is-medium': isMedium}" routerLink="/planer" routerLinkActive="active" ariaCurrentWhenActive="page">PLANER OG PRISER</a>
   
   <!--<a class="order-now" [ngClass]="{'is-medium': isMedium}" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">-->
-  <a class="order-now" (click)="doTracking()" [ngClass]="{'is-medium': isMedium}" href="https://buy.stripe.com/{{stripeLink}}">
-    {{ text[2] }}
-  </a>
+  <!--<a class="order-now" (click)="doTracking()" [ngClass]="{'is-medium': isMedium}" href="https://buy.stripe.com/{{stripeLink}}">
+    {{ text[2] }}!
+  </a>-->
+
+  <a class="order-now" [ngClass]="{'is-medium': isMedium}" routerLink="/analyse" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ RAPPORT</a>
 
 </div>

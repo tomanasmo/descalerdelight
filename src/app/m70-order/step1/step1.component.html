@@ -1,54 +1,45 @@
 <h5 class="step">
-  <fa-icon [icon]="faSquareCheck"></fa-icon> {{ text[0] }}
+  <fa-icon [icon]="faSquareCheck"></fa-icon> Steg 1: Velg plan<!--{{ text[0] }}-->
 </h5>
 
 <div id="wrapper" class="wrapper" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">
 
   <div class="item most-popular">    
     <p style="grid-column: 1/3;" class="mostpop2">{{ text[1] }}</p>
-    <div id="box4x" class="box" (click)="selectQuantity($event)">      
-      <img src="./assets/img/4x-v3.png"/>
-      <div style="text-align: center;">
-        <h1>4x</h1>
-        <p>{{ productNamePlural }}</p>
+    <div id="box3x" class="box" (click)="selectQuantity($event)">
+      <img src="./assets/img/tabs-plan3.svg"/>
+      <div style="text-align: center; font-size: 0.7em;">
+        <h1>15 Descaler Delight<br/>+<br/>75 Cleaner Charm</h1>
+        <p>Anbefalt mengde til 15 kopper pr dag - tilsvarer 3 personers årsforbruk av kaffe</p>
+        <p class="before-price"><s>{{ currencySymbol }} 2250</s></p>
+        <p class="price"><strong>{{ currencySymbol }} 1500</strong></p>
+        <!--<p>{{ productNamePlural }}</p>
         <p class="before-price"><s>{{ currencySymbol }} {{ beforePrices[3].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</s></p>
-        <p class="price"><strong>{{ currencySymbol }} {{ prices[3].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</strong></p>
-      </div>
-    </div>
-  </div>
-
-  <div id="box3x" class="item standard" (click)="selectQuantity($event)">
-    <div class="box">
-      <img src="./assets/img/3x-v3.png"/>
-      <div style="text-align: center;">
-        <h1>3x</h1>
-        <p>{{ productNamePlural }}</p>
-        <p class="before-price"><s>{{ currencySymbol }} {{ beforePrices[2].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</s></p>
-        <p class="price"><strong>{{ currencySymbol }} {{ prices[2].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</strong></p>
+        <p class="price"><strong>{{ currencySymbol }} {{ prices[3].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</strong></p>-->
       </div>
     </div>
   </div>
 
   <div id="box2x" class="item standard" (click)="selectQuantity($event)">
     <div class="box">
-      <img src="./assets/img/2x-v3.png"/>
-      <div style="text-align: center;">
-        <h1>2x</h1>
-        <p>{{ productNamePlural }}</p>
-        <p class="before-price"><s>{{ currencySymbol }} {{ beforePrices[1].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</s></p>
-        <p class="price"><strong>{{ currencySymbol }} {{ prices[1].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</strong></p>
+      <img src="./assets/img/tabs-plan2.svg"/>
+      <div style="text-align: center; font-size: 0.7em;">
+        <h1>10 Descaler Delight<br/>+<br/>50 Cleaner Charm</h1>
+        <p>Anbefalt mengde til 10 kopper pr dag - tilsvarer 2 personers årsforbruk av kaffe</p>
+        <p class="before-price"><s>{{ currencySymbol }} 1500</s></p>
+        <p class="price"><strong>{{ currencySymbol }} 1250</strong></p>
       </div>
     </div>
   </div>
 
   <div id="box1x" class="item standard" (click)="selectQuantity($event)">
     <div class="box">
-      <img src="./assets/img/1x-v3.png"/>
-      <div style="text-align: center;">
-        <h1>1x</h1>
-        <p>{{ productName }}</p>
-        <p class="before-price"><s>{{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</s></p>
-        <p class="price"><strong>{{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }}</strong></p>
+      <img src="./assets/img/tabs-plan1.svg"/>
+      <div style="text-align: center; font-size: 0.7em;">
+        <h1>5 Descaler Delight<br/>+<br/>25 Cleaner Charm</h1>
+        <p>Anbefalt mengde til 5 kopper pr dag - tilsvarer 1 persons årsforbruk av kaffe</p>
+        <!--<p class="before-price"><s>{{ currencySymbol }} 2250</s></p>-->
+        <p class="price"><strong>{{ currencySymbol }} 750</strong></p>
       </div>
     </div>
   </div>

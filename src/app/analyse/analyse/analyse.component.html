@@ -1,0 +1,89 @@
+<div class="wrapper">
+
+  <div class="outer-grid">
+
+    <div class="form-container">
+
+      <h1>Få din gratis rapport</h1>
+
+      <p>Hvor ofte bør du avkalke kaffemaskinen? Det avhenger av vannets kalkinnhold (basert på vannverket ditt), hvor mange kopper du lager daglig, og typen kaffemaskin du bruker. Fyll ut skjemaet under, så sender vi deg en skreddersydd rapport – helt gratis!</p>
+
+      <form (ngSubmit)="onSubmit()" #coffeeForm="ngForm">
+
+        <div class="form-group">
+          <label for="email">E-post (obligatorisk):</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            [(ngModel)]="user.email"
+            required 
+            placeholder="din@epost.no" 
+            class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="vannverk">Vannverk eller adresse (valgfritt):</label>
+          <input 
+            type="text" 
+            id="vannverk" 
+            name="vannverk" 
+            [(ngModel)]="user.vannverk"
+            placeholder="F.eks. Oslo eller adresse" 
+            class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="kaffemaskin">Kaffemaskin (valgfritt):</label>
+          <input 
+            type="text" 
+            id="kaffemaskin" 
+            name="kaffemaskin" 
+            [(ngModel)]="user.kaffemaskin"
+            placeholder="F.eks. Nespresso Vertuo" 
+            class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="kopper">Antall kopper per dag (valgfritt):</label>
+          <input 
+            type="number" 
+            id="kopper" 
+            name="kopper" 
+            [(ngModel)]="user.kopper"
+            min="0" 
+            placeholder="F.eks. 5" 
+            class="form-control">
+        </div>
+    
+        <button type="submit" [disabled]="!coffeeForm.valid" class="submit-btn">
+          Få rapport
+        </button>
+      </form>
+
+      <!-- Vis suksessmelding når successMessage er satt -->
+      <div *ngIf="successMessage" class="success-message">
+        <p>{{ successMessage }}</p>
+      </div>
+
+    </div>
+
+    <p>Foretrekker du epost? Send infoen direkte til: <a href="mailto:analyse@descalerdelight.com">analyse@descalerdelight.com</a>.</p>    
+    
+    <h3>Hva vi trenger</h3>
+
+    <p>For å gi deg den beste rapporten, hjelper det om du oppgir:</p>
+
+    <ol>
+      <li>Omtrent hvor mange kopper kaffemaskinen lager daglig.</li>
+      <li>Hvilken kaffemaskin du har – gjerne med modell eller serienummer.</li>
+      <li>Navnet på vannverket ditt, eller adressen din så vi kan slå det opp.</li>
+    </ol>
+
+    <h3>Ditt personvern</h3>
+
+    <p>Vi tar personvern på alvor. All informasjon håndteres i tråd med GDPR og norsk personvernlovgivning. Dataene dine er trygge hos oss og brukes kun til å gi deg en skreddersydd opplevelse. Vi lover å ikke spamme deg – du hører kun fra oss når det er noe relevant eller viktig.</p>
+    
+  </div>
+
+</div>

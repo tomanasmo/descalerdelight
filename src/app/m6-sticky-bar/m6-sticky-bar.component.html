@@ -14,7 +14,8 @@
 
       <div class="item3" [ngClass]="{'is-medium': isMedium, 'is-small': isSmall}">        
         <!--<a class="order-now2" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">FÅ -{{ discountPercent}}% I RABATT</a>-->
-        <a class="order-now2" (click)="doTracking()" href="https://buy.stripe.com/{{stripeLink}}">FÅ -{{ discountPercent}}% I RABATT</a>
+        <!--<a class="order-now2" (click)="doTracking()" href="https://buy.stripe.com/{{stripeLink}}">SEND MEG ANALYSE</a>-->
+        <a class="order-now2" [ngClass]="{'is-medium': isMedium}" routerLink="/analyse" routerLinkActive="active" ariaCurrentWhenActive="page">SEND MEG ANALYSE</a>
       </div>
 
     </div>

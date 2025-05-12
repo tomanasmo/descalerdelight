@@ -14,6 +14,9 @@ import { M12WhyChooseModule } from '../m12-why-choose/m12-why-choose.module';
 import { M13WhatsInsideModule } from '../m13-whats-inside/m13-whats-inside.module';
 import { M5OneImageWithDescLeftAndBottomModule } from '../m5-one-image-with-desc-left-and-bottom/m5-one-image-with-desc-left-and-bottom.module';
 import { M14LiveMatchModule } from '../m14-live-match/m14-live-match.module';
+import { M9OneImageWithDescLeftAndBottomModule } from '../m9-one-image-with-desc-left-and-bottom/m9-one-image-with-desc-left-and-bottom.module';
+import { M91OneImageWithDescRightAndTopModule } from "../m91-one-image-with-desc-right-and-top/m91-one-image-with-desc-right-and-top.module";
+import { M92OneImageWithDescLeftAndBottomModule } from "../m92-one-image-with-desc-left-and-bottom/m92-one-image-with-desc-left-and-bottom.module";
 
 @NgModule({
   declarations: [
@@ -33,8 +36,11 @@ import { M14LiveMatchModule } from '../m14-live-match/m14-live-match.module';
     M11FaqModule,
     M12WhyChooseModule,
     M13WhatsInsideModule,
-    M14LiveMatchModule
-  ],
+    M14LiveMatchModule,
+    M9OneImageWithDescLeftAndBottomModule,
+    M91OneImageWithDescRightAndTopModule,
+    M92OneImageWithDescLeftAndBottomModule
+],
   exports: [
     M50LandingPageComponent
   ]

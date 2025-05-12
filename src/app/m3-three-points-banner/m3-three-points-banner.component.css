@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: minmax(0, 950px); /* 100% up to max (use min=0, not 100%). */
   justify-content: center;
-  background-color: black;
+  background-color: var(--background-color);
   color: white;
   padding: 1em 2em;
 }

@@ -8,9 +8,12 @@ import { M2TopBannerModule } from './m2-top-banner/m2-top-banner.module';
 import { M3ThreePointsBannerModule } from './m3-three-points-banner/m3-three-points-banner.module';
 import { M4ThreeHorizontalBarModule } from './m4-three-horizontal-bar/m4-three-horizontal-bar.module';
 import { M5OneImageWithDescLeftAndBottomModule } from './m5-one-image-with-desc-left-and-bottom/m5-one-image-with-desc-left-and-bottom.module';
+import { M9OneImageWithDescLeftAndBottomModule } from './m9-one-image-with-desc-left-and-bottom/m9-one-image-with-desc-left-and-bottom.module';
+import { M92OneImageWithDescLeftAndBottomModule } from './m92-one-image-with-desc-left-and-bottom/m92-one-image-with-desc-left-and-bottom.module';
 import { M6StickyBarModule } from './m6-sticky-bar/m6-sticky-bar.module';
 import { M0CoreModule } from './m0-core/m0-core.module';
 import { M7OneImageWithDescRightAndTopModule } from './m7-one-image-with-desc-right-and-top/m7-one-image-with-desc-right-and-top.module';
+import { M91OneImageWithDescRightAndTopModule } from './m91-one-image-with-desc-right-and-top/m91-one-image-with-desc-right-and-top.module';
 import { M8TrippleImagesAlternatingModule } from './m8-tripple-images-alternating/m8-tripple-images-alternating.module';
 import { M9DraftModule } from './m9-draft/m9-draft.module';
 import { M10DraftModule } from './m10-draft/m10-draft.module';
@@ -26,13 +29,17 @@ import { M70OrderModule } from './m70-order/m70-order.module';
 import { M6StickyBarModule2 } from './_draft/m6-sticky-bar2/m6-sticky-bar.module';
 import { M14LiveMatchModule } from './m14-live-match/m14-live-match.module';
 import { PixelModule } from 'ngx-pixel';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserModule,    
     /*AngularFireModule.initializeApp(firebaseConfig),*/
     /*AngularFireAnalyticsModule,*/
     PixelModule.forRoot({ enabled: true, pixelId: '1293114901562517' }),
@@ -43,10 +50,13 @@ import { PixelModule } from 'ngx-pixel';
     M3ThreePointsBannerModule,
     M4ThreeHorizontalBarModule,
     M5OneImageWithDescLeftAndBottomModule,
+    M9OneImageWithDescLeftAndBottomModule,
+    M92OneImageWithDescLeftAndBottomModule,
     M0CoreModule,
     M6StickyBarModule,
     M6StickyBarModule2,
     M7OneImageWithDescRightAndTopModule,
+    M91OneImageWithDescRightAndTopModule,
     M8TrippleImagesAlternatingModule,
     M9DraftModule,
     M10DraftModule,

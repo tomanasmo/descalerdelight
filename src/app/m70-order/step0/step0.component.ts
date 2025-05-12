@@ -19,6 +19,7 @@ export class Step0Component implements OnInit {
   beforePrices = AnasmoGlobals.BEFORE_PRICES;
   currencySymbol = AnasmoGlobals.CURRENCY_SYMBOL;
   productName = AnasmoGlobals.PRODUCT_NAME;
+  currentPrice = AnasmoGlobals.CURRENT_PRICE;
 
   constructor(private responsive: BreakpointObserver) {}
   

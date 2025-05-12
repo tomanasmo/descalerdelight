@@ -8,15 +8,19 @@
   </div>
 
   <div class="item2">
-    <div class="rabatt">{{ text[0] }}</div>
-    <span class="prosent">-{{ discountPercent }}%</span>
-    <p class="siste-sjanse">{{ text[1] }}</p>
-    <p class="siste-sjanse2">{{ text[2] }}</p>
+    <div class="rabatt">PERFEKT</div>
+    <span class="prosent">KAFFESMAK</span>
+    <!--<p class="siste-sjanse">Perfekt</p>
+    <p class="siste-sjanse">kaffesmak</p>-->
+    <p class="siste-sjanse">Alltid 100% ren</p>
+    <p class="siste-sjanse2">Få en renere kaffemaskin og perfekt kaffesmak med våre effektive tabletter</p>
+    <!--<p class="siste-sjanse2">Alltid få den beste smaken og ta vare på din dyrbare kaffemaskin</p>-->
     <!--<a class="order-now2" routerLink="/bestill" routerLinkActive="active" ariaCurrentWhenActive="page">{{ text[3] }} -{{ discountPercent}}% {{ text[4] }}</a>-->
-    <a class="order-now2" href="https://buy.stripe.com/{{stripeLink}}">{{ text[3] }} -{{ discountPercent}}% {{ text[4] }}</a>
-    <p class="kun">{{ text[5] }} {{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[6] }} {{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[7] }}</p>
+    <!--<a class="order-now2" href="https://buy.stripe.com/{{stripeLink}}">SEND MEG RAPPORT</a>-->
+    <a class="order-now2" [ngClass]="{'is-medium': isMedium}" routerLink="/analyse" routerLinkActive="active" ariaCurrentWhenActive="page">GRATIS RAPPORT</a>
+    <!--<p class="kun">{{ text[5] }} {{ currencySymbol }} {{ prices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[6] }} {{ currencySymbol }} {{ beforePrices[0].toLocaleString('no-NO', { minimumFractionDigits: 2 }) }} {{ text[7] }}</p>
     <p class="kun">{{ text[8] }}</p>
-    <p class="kun">{{ text[9] }}</p>
+    <p class="kun">{{ text[9] }}</p>-->
   </div>
 
   <!-- Show this only if big screen. -->
@@ -31,5 +35,5 @@
 <!-- Image. -->
 <ng-template #image>
   <!--<img src="./assets/img/mockup/m2-2.png" />-->
-  <img src="./assets/img/m2-top-banner-product-image.png" />
+  <img src="./assets/img/tabs.svg" />
 </ng-template>
