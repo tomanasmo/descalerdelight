@@ -12,7 +12,7 @@
         <hr />
 
         <h5 class="step">
-          <fa-icon [icon]="faSquareCheck"></fa-icon> Steg 2: Betaling med Revolut Pay
+          <fa-icon [icon]="faSquareCheck"></fa-icon> Steg {{ step }} av 2: {{ step === 1 ? 'Dine opplysninger' : 'Betaling' }}
         </h5>
 
         <div class="payment-container">
@@ -30,51 +30,44 @@
                   <input id="zipCode" type="text" [(ngModel)]="zipCode" name="zipCode" class="form-control" placeholder="Skriv inn postnummer" required #zipCodeInput="ngModel" />
                   <div *ngIf="zipCodeInput.invalid && zipCodeInput.touched" class="error">Vennligst skriv inn et gyldig postnummer (minst 4 sifre).</div>
                 </div>
+                <!-- Ekstra felt vises etter at e-post og postnummer er validert -->
+                <div *ngIf="showAdditionalFields">
+                  <div class="form-group">
+                    <label for="firstName">Fornavn</label>
+                    <input id="firstName" type="text" [(ngModel)]="firstName" name="firstName" class="form-control" placeholder="Skriv inn fornavn" required #firstNameInput="ngModel" />
+                    <div *ngIf="firstNameInput.invalid && firstNameInput.touched" class="error">Vennligst skriv inn fornavn.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Etternavn</label>
+                    <input id="lastName" type="text" [(ngModel)]="lastName" name="lastName" class="form-control" placeholder="Skriv inn etternavn" required #lastNameInput="ngModel" />
+                    <div *ngIf="lastNameInput.invalid && lastNameInput.touched" class="error">Vennligst skriv inn etternavn.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Adresse</label>
+                    <input id="address" type="text" [(ngModel)]="address" name="address" class="form-control" placeholder="Skriv inn adresse" required #addressInput="ngModel" />
+                    <div *ngIf="addressInput.invalid && addressInput.touched" class="error">Vennligst skriv inn adresse.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">By/Sted</label>
+                    <input id="city" type="text" [(ngModel)]="city" name="city" class="form-control" placeholder="Skriv inn by/sted" required #cityInput="ngModel" />
+                    <div *ngIf="cityInput.invalid && cityInput.touched" class="error">Vennligst skriv inn by/sted.</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="phoneNumber">Telefonnummer</label>
+                    <input id="phoneNumber" type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" placeholder="Skriv inn telefonnummer" required #phoneNumberInput="ngModel" />
+                    <div *ngIf="phoneNumberInput.invalid && phoneNumberInput.touched" class="error">Vennligst skriv inn et gyldig telefonnummer (minst 8 sifre).</div>
+                  </div>
+                </div>
               </div>
-              <br/>
+              <br />
               <div>
-                <button class="btn btn-primary" (click)="proceedToNextStep()" [disabled]="!isStep1Valid()">Fortsett</button>
+                <button class="btn btn-primary" (click)="proceedToNextStep()" [disabled]="showAdditionalFields ? !isStep1Valid() : !isEmailAndZipValid()">Fortsett</button>
               </div>
-              <br/>
+              <br />
             </div>
 
-            <!-- Steg 2 -->
-            <div *ngIf="step === 2">
-              <div class="form-table">
-                <div class="form-group">
-                  <label for="firstName">Fornavn</label>
-                  <input id="firstName" type="text" [(ngModel)]="firstName" name="firstName" class="form-control" placeholder="Skriv inn fornavn" required #firstNameInput="ngModel" />
-                  <div *ngIf="firstNameInput.invalid && firstNameInput.touched" class="error">Vennligst skriv inn fornavn.</div>
-                </div>
-                <div class="form-group">
-                  <label for="lastName">Etternavn</label>
-                  <input id="lastName" type="text" [(ngModel)]="lastName" name="lastName" class="form-control" placeholder="Skriv inn etternavn" required #lastNameInput="ngModel" />
-                  <div *ngIf="lastNameInput.invalid && lastNameInput.touched" class="error">Vennligst skriv inn etternavn.</div>
-                </div>
-                <div class="form-group">
-                  <label for="address">Adresse</label>
-                  <input id="address" type="text" [(ngModel)]="address" name="address" class="form-control" placeholder="Skriv inn adresse" required #addressInput="ngModel" />
-                  <div *ngIf="addressInput.invalid && addressInput.touched" class="error">Vennligst skriv inn adresse.</div>
-                </div>
-                <div class="form-group">
-                  <label for="city">By/Sted</label>
-                  <input id="city" type="text" [(ngModel)]="city" name="city" class="form-control" placeholder="Skriv inn by/sted" required #cityInput="ngModel" />
-                  <div *ngIf="cityInput.invalid && cityInput.touched" class="error">Vennligst skriv inn by/sted.</div>
-                </div>
-                <div class="form-group">
-                  <label for="phoneNumber">Telefonnummer</label>
-                  <input id="phoneNumber" type="tel" [(ngModel)]="phoneNumber" name="phoneNumber" class="form-control" placeholder="Skriv inn telefonnummer" required #phoneNumberInput="ngModel" />
-                  <div *ngIf="phoneNumberInput.invalid && phoneNumberInput.touched" class="error">Vennligst skriv inn et gyldig telefonnummer (minst 8 sifre).</div>
-                </div>                
-              </div>
-              <br/>
-              <div>
-                <button class="btn btn-primary" (click)="proceedToNextStep()" [disabled]="!isStep2Valid()">Fortsett</button>
-              </div>
-            </div>
-
-            <!-- Steg 3 -->
-            <div *ngIf="step === 3 && publicId">
+            <!-- Steg 2 (tidligere Steg 3) -->
+            <div *ngIf="step === 2 && publicId">
               <div class="user-details">
                 <h6>Dine opplysninger</h6>
                 <p class="name">{{ firstName }} {{ lastName }}</p>
@@ -93,6 +86,9 @@
                   <div *ngIf="cardErrorMessage && !cardErrorMessage.includes('kortinnehavernavn')" class="error">{{ cardErrorMessage }}</div>
                 </div>
               </div>
+              <div>
+                <button class="btn btn-success" (click)="submitCard?.()" [disabled]="!isFormValid()">Betal ordren</button>
+              </div>
             </div>
 
             <hr />
@@ -100,8 +96,7 @@
               <p>Ordrebeløp inkl. angitt MVA <span>{{ formatPrice(getPriceInNOK()) }} kr</span></p>
               <div *ngIf="showOrderDetails" class="order-details">Inkl. MVA & frakt</div>
             </div>
-            <button class="btn btn-success" (click)="submitCard?.()" [disabled]="!isFormValid()">Betal ordren</button>
-            
+
             <p class="terms-text">
               Ved å trykke "Betal ordren" aksepterer jeg vilkårene til 
               <a href="https://www.revolut.com/nb-NO/legal/pay-with-revolut-checkout/" target="_blank" rel="noopener">Revolut</a> og 

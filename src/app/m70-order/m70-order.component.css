@@ -287,3 +287,30 @@ hr {
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Legg til i bunnen av m70-order.component.css */
+
+/* Styling for Tilbake-knapp */
+.btn-secondary {
+  display: block;
+  width: 100%;
+  background-color: #6c757d; /* Grå farge for sekundærknapp */
+  color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+  margin-bottom: 0.5em; /* Avstand til Fortsett/Betal-knappen */
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268; /* Litt lysere grå ved hover */
+  border-color: #5a6268;
+}
+
+.btn-secondary:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

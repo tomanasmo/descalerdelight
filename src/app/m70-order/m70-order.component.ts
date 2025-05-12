@@ -11,7 +11,8 @@ import { AnasmoGlobals } from 'src/anasmo/global';
   styleUrls: ['./m70-order.component.css'],
 })
 export class M70OrderComponent implements OnInit, AfterViewInit {
-  step: 1 | 2 | 3 = 1;
+  step: 1 | 2 = 1; // Kun Steg 1 og 2
+  showAdditionalFields: boolean = false; // Kontrollerer visning av ekstra felt i Steg 1
   orderId: string | null = null;
   publicId: string | null = null;
   currency: string = 'NOK';
@@ -23,15 +24,13 @@ export class M70OrderComponent implements OnInit, AfterViewInit {
   // Felter for Steg 1
   customerEmail: string = '';
   zipCode: string = '';
-
-  // Felter for Steg 2
   firstName: string = '';
   lastName: string = '';
   address: string = '';
   city: string = '';
   phoneNumber: string = '';
 
-  // Felt for Steg 3
+  // Felt for Steg 2
   cardholderName: string = '';
   cardErrorMessage: string | null = null;
 
@@ -55,7 +54,7 @@ export class M70OrderComponent implements OnInit, AfterViewInit {
 
   // Vis pris i kroner (konverter fra øre til kroner)
   getPriceInNOK(): string {
-    return (AnasmoGlobals.CURRENT_PRICE / 100).toFixed(2); // F.eks. 75000 -> "750.00"
+    return (AnasmoGlobals.CURRENT_PRICE / 100).toFixed(2);
   }
 
   ngOnInit(): void {
@@ -84,29 +83,41 @@ export class M70OrderComponent implements OnInit, AfterViewInit {
     console.log('ngAfterViewInit: Card field element:', this.cardField?.nativeElement);
   }
 
-  // Legg til i m70-order.component.ts
+  // Formater pris
   formatPrice(price: number | string): string {
     const numPrice = typeof price === 'string' ? parseFloat(price) : price;
     return numPrice.toFixed(2).replace('.', ',');
   }
 
   proceedToNextStep(): void {
-    if (this.step === 1 && this.isStep1Valid()) {
-      this.step = 2;
-    } else if (this.step === 2 && this.isStep2Valid()) {
-      this.step = 3;
-      this.createPayment();
+    if (this.step === 1) {
+      if (!this.showAdditionalFields) {
+        // Fase 1: Valider kun e-post og postnummer
+        if (this.isEmailAndZipValid()) {
+          this.showAdditionalFields = true; // Vis ekstra felt
+          this.cdr.detectChanges();
+        }
+      } else {
+        // Fase 2: Valider alle felt i Steg 1
+        if (this.isStep1Valid()) {
+          this.step = 2; // Gå til kortinformasjon
+          this.createPayment();
+        }
+      }
     }
   }
 
-  isStep1Valid(): boolean {
+  // Valider kun e-post og postnummer (Fase 1)
+  isEmailAndZipValid(): boolean {
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.customerEmail);
     const zipCodeValid = this.zipCode.trim().length >= 4;
     return emailValid && zipCodeValid;
   }
 
-  isStep2Valid(): boolean {
+  // Valider alle felt i Steg 1 (Fase 2)
+  isStep1Valid(): boolean {
     return (
+      this.isEmailAndZipValid() &&
       this.firstName.trim().length > 0 &&
       this.lastName.trim().length > 0 &&
       this.address.trim().length > 0 &&
@@ -116,16 +127,13 @@ export class M70OrderComponent implements OnInit, AfterViewInit {
   }
 
   isFormValid(): boolean {
-    const step1Valid = this.isStep1Valid();
-    const step2Valid = step1Valid && this.isStep2Valid();
-    const step3Valid = step2Valid && this.publicId !== null && this.cardholderName.trim().split(/\s+/).length >= 2;
-    return this.step === 3 && step3Valid;
+    return this.step === 2 && this.publicId !== null && this.cardholderName.trim().split(/\s+/).length >= 2;
   }
 
   createPayment(): void {
     console.log('createPayment: Preparing payload');
     const payload = {
-      amount: AnasmoGlobals.CURRENT_PRICE / 100, // Konverter øre til kroner (f.eks. 75000 -> 750)
+      amount: AnasmoGlobals.CURRENT_PRICE / 100,
       currency: this.currency,
       customer_email: this.customerEmail,
       first_name: this.firstName,
@@ -225,7 +233,7 @@ export class M70OrderComponent implements OnInit, AfterViewInit {
         });
 
         setTimeout(() => {
-          if (!this.cardErrorMessage && this.step === 3) {
+          if (!this.cardErrorMessage && this.step === 2) {
             console.error('submitCard: No response from Revolut Checkout, assuming empty card info');
             this.cardErrorMessage = 'Vennligst fyll ut kortinformasjon (kortnummer, utløpsdato, CVC).';
             this.cdr.detectChanges();
