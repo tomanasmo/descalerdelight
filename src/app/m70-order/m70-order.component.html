@@ -12,7 +12,7 @@
         <hr />
 
         <h5 class="step">
-          <fa-icon [icon]="faSquareCheck"></fa-icon> Steg {{ step }} av 2: {{ step === 1 ? 'Dine opplysninger' : 'Betaling' }}
+          <fa-icon [icon]="faSquareCheck"></fa-icon> Steg 2: Betaling med Revolut Pay
         </h5>
 
         <div class="payment-container">
@@ -66,7 +66,7 @@
               <br />
             </div>
 
-            <!-- Steg 2 (tidligere Steg 3) -->
+            <!-- Steg 2 -->
             <div *ngIf="step === 2 && publicId">
               <div class="user-details">
                 <h6>Dine opplysninger</h6>
@@ -91,12 +91,12 @@
               </div>
             </div>
 
+            <!-- Elementene som alltid skal vises -->
             <hr />
             <div class="order-summary">
               <p>Ordrebeløp inkl. angitt MVA <span>{{ formatPrice(getPriceInNOK()) }} kr</span></p>
               <div *ngIf="showOrderDetails" class="order-details">Inkl. MVA & frakt</div>
             </div>
-
             <p class="terms-text">
               Ved å trykke "Betal ordren" aksepterer jeg vilkårene til 
               <a href="https://www.revolut.com/nb-NO/legal/pay-with-revolut-checkout/" target="_blank" rel="noopener">Revolut</a> og 
@@ -104,7 +104,6 @@
               <a href="https://www.revolut.com/en-NO/legal/privacy/" target="_blank" rel="noopener">Revolut</a> og 
               <a href="https://descalerdelight.com/personvern" target="_blank" rel="noopener">descalerdelight.com</a>.
             </p>
-            
             <a href="https://www.revolut.com/nb-NO/legal/pay-with-revolut-checkout/" target="_blank" rel="noopener">
               <img class="revolut-logo" src="/assets/img/RevolutPay-Online-Assets/RevolutPay-Online-Assets/Revolut Pay - Button and logo assets/Button/Button/Black/Small.svg" alt="Revolut Logo">
             </a>

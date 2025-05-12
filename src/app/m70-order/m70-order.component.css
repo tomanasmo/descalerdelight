@@ -192,8 +192,8 @@
 .terms-text {
   font-size: 0.65em; /* Veldig liten font */
   color: #555; /* Grå tekst, samme som .order-details */
-  margin-top: 0.5em; /* Liten avstand fra knappen */
-  margin-bottom: 0; /* Ingen ekstra luft under */
+  margin-top: 1em; /* Lik avstand over som knapper */
+  margin-bottom: 1em; /* Lik avstand under som knapper */
   text-align: center; /* Midtstille teksten */
 }
 
@@ -229,6 +229,12 @@ hr {
 /* Legg til luft over Fortsett-knappen */
 [ngIf="step === 1"] .btn-primary {
   margin-top: 1em; /* Avstand fra form-table */
+}
+
+/* Legg til luft over og under Betal ordren-knappen */
+.payment-container form > div .btn-success {
+  margin-top: 1em; /* Samme avstand over som Fortsett-knappen */
+  margin-bottom: 1em; /* Samme avstand under som Fortsett-knappen */
 }
 
 /* Hover-stil for knapper */
@@ -286,31 +292,4 @@ hr {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #555;
-}
-
-/* Legg til i bunnen av m70-order.component.css */
-
-/* Styling for Tilbake-knapp */
-.btn-secondary {
-  display: block;
-  width: 100%;
-  background-color: #6c757d; /* Grå farge for sekundærknapp */
-  color: #fff;
-  border: 1px solid #6c757d;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  font-size: 0.9em;
-  text-align: center;
-  transition: background-color 0.2s ease-in-out;
-  margin-bottom: 0.5em; /* Avstand til Fortsett/Betal-knappen */
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268; /* Litt lysere grå ved hover */
-  border-color: #5a6268;
-}
-
-.btn-secondary:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
